@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Detalle de producto</div>
+                <div class="card-header">Detalle de producto individual para comprar</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -13,10 +13,14 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    cualquiera ve
+                    product shopping card
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection
+
+@section('footer')
+@extends('footer')
 @endsection

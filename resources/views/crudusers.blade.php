@@ -1,10 +1,20 @@
-@extends('layouts.app')
+@extends('dashboard')
 
 @section('content')
+
+@if($messaje = Session::get('success'))
+<div class="alert alert-success alert-dismissible fade in show" role="alert">
+    <p>{{ $messaje }}</p>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+@endif
+
 <div class="container-fluid">
     <div class="panel shadow">
         <div class="header">
-            <h2 class="title">
+            <h2 class="title" style="font-size: 1.5rem;">
                 <i class="fas fa-users" style="margin-right: 10px;"></i>
                  Usuarios
             </h2>
@@ -33,14 +43,13 @@
                         <td>{{$user->email}}</td>
                         <td>{{$user->role}}</td>
                         <td>
-                            <div class="opts">
-                                <a class="edit" href="{{ route('updateRole', $user->id) }}" data-toggle="tooltip" data-placement="top" title="Editar">
-                                    <i class="fas fa-edit"></i>
-                                </a>
-                                <a class="delete" href="" data-toggle="tooltip" data-placement="top" title="Eliminar">
-                                    <i class="fas fa-trash-alt"></i>
-                                </a>
-                            </div>
+                            <form action="{{ route('destroy', $user->id) }}" method="post">
+                                @method('GET')
+                                @csrf
+                                <button type="submit" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="far fa-trash-alt" ></i></button>
+                                <a href="{{ route('show', $user->id) }}" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Ver"><i class="far fa-eye"></i></a>
+                                <a href="{{ route('edit', $user->id) }}" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fas fa-user-edit"></i></a>
+                            </form>
                         </td>
                     </tr>
                     @endforeach
@@ -50,4 +59,5 @@
         </div>
     </div>
 </div>
+{{ $users->links() }}
 @endsection

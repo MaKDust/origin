@@ -51,7 +51,8 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'], 
+            'avatar' => ['image', 'mimes:jpeg,bmp,png', 'dimensions:min_width=100,min_height=200']
         ]);
     }
 
@@ -63,10 +64,26 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        if(request()->has('avatar')){
+            $avataruploaded = request()->file('avatar');
+            // nombre unico para cada imagen subida
+            $avatarname = time() . '.' . $avataruploaded->getClientOriginalExtension();
+            // crear la ruta donde se colocar la imagen en la carpeta
+            $avatarpath = public_path('/img/');
+            // mover ese archivo a la $direccion, $nombre
+            $avataruploaded->move($avatarpath, $avatarname);
+            // subir a la base  
+            return User::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'password' => Hash::make($data['password']),
+                'avatar' => '/img/' . $avatarname,
+            ]);
+        }
         return User::create([
             'name' => e($data['name']),
             'email' => e($data['email']),
-            'password' => Hash::make($data['password']),
+            'password' => Hash::make($data['password']),           
         ]);
     }
 }

@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->integer('role')->default('0');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('avatar');->default('/img/default-avatar.jpg');
             $table->string('user')->default('guest');
             $table->string('name');
             $table->string('lastname')->default('guest');
@@ -25,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->integer('celphone')->default('555');
             $table->string('country')->default('guest');
             $table->string('state')->default('guest');
+            $table->string('city')->default('guest');
             $table->string('postalcode')->default('guest');
             $table->rememberToken();
             $table->timestamp('email_verified_at')->nullable();
