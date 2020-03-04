@@ -22,6 +22,3 @@
 </div>
 @endsection
 
-@section('footer')
-@extends('footer')
-@endsection
