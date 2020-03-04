@@ -83,7 +83,7 @@
         </div>
 
     </div>
-@yield('footer')
+{{-- @yield('footer') --}}
     
 </body>
 </html>
