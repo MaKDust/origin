@@ -79,21 +79,28 @@
                                             <h6 class="heading-small text-muted mb-4">Informacion de contacto</h6>
                                             <div class="row">
 
-                                                <div class="col-md-3">
+                                                <div class="col-md-6">
                                                     <strong>Direccion</strong><br>
                                                      {{ $users->address }}
                                                 </div>
 
-                                                <div class="col-md-3">
-                                                    <strong>Ciudad</strong><br>
-                                                    {{ $users->city }}
+                                                <div class="col-md-6">
+                                                    <strong>Codigo Postal</strong><br>
+                                                    {{ $users->zipcode }}
                                                 </div>
+
+                                            </div>
+                                            <hr class="my-4">
+                                            <div class="row">
 
                                                 <div class="col-md-3">
                                                     <strong>Provincia</strong><br>
                                                     {{ $users->state }}
                                                 </div>
-
+                                                <div class="col-md-3">
+                                                    <strong>Ciudad</strong><br>
+                                                    {{ $users->city }}
+                                                </div>
                                                 <div class="col-md-3">
                                                     <strong>Pais</strong><br>
                                                     {{ $users->county }}

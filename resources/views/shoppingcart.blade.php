@@ -49,7 +49,7 @@
                              <h3 class="float-left">Total a pagar: ${{ Cart::session(auth()->id())->getTotal() }}</h3>
                             <a href="{{ route('checkout') }}" class="btn btn-lg btn-warning float-right">Finalizar compra</a>
                              
-                             <a href=""></a>
+                             
                          </div>
                      
                 </div>

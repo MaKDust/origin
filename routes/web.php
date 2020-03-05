@@ -10,7 +10,7 @@ Route::get('/welcome', 'HomeController@index')->name('welcome');
 
 
 Route::get('/product', 'GuestController@product')->name('product'); 
-Route::get('/contact', 'GuestController@contact')->name('contact'); 
+Route::get('/contact', 'GuestController@contact')->name('contact'); 	
 
 /*
 |--------------------------------------------------------------------------
@@ -26,11 +26,10 @@ Route::get('/shoppingcart', 'CartController@shoppingcart')->name('shoppingcart')
 Route::get('/addToCart/{id}', 'CartController@add')->name('addToCart')->middleware('auth');
 Route::get('/destroyItem/{id}', 'CartController@destroyItem')->name('destroyItem')->middleware('auth');
 Route::get('/updateQuantity/{id}', 'CartController@updateQuantity')->name('updateQuantity')->middleware('auth');
-
-
-
 Route::get('/checkout', 'HomeController@checkout')->name('checkout')->middleware('auth'); 
 
+Route::get('/storeOrder', 'OrderController@storeOrder')->name('storeOrder')->middleware('auth');
+//Route::resource('orders', 'OrderController')->middleware('auth'); 
 
 
 

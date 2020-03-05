@@ -45,9 +45,7 @@
                                     </li>
                                 @endif
                             @else
-                                @if ((Auth::user() != null) && (Auth::user()->role == "1"))
-                                <li style="margin:8px;font-size: 1rem"><a href="{{url('/dashboard')}}"><i class="fas fa-user-cog"></i></a></li>
-                                @endif
+                                
                                 <li class="nav-item">
                                 <a class="nav-link" href="{{ route('shoppingcart') }}">
                                     <div class="badge badge-danger">
@@ -81,6 +79,9 @@
                                         >
                                     </a>
                                 </li>
+                                @if ((Auth::user() != null) && (Auth::user()->role == "1"))
+                                <li style="margin:8px;font-size: 1rem"><a href="{{url('/dashboard')}}"><i class="fas fa-cogs"></i></a></li>
+                                @endif
                             @endguest
                          </ul>
                     </div>
