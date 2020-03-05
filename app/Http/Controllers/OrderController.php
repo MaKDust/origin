@@ -87,8 +87,24 @@ class OrderController extends Controller
         }
 
         $order->save();
-              
-        dd('orden creada',$order);
+
+        $cartItems = \Cart::session(auth()->id())->getContent();
+        foreach ($cartItems as $item) 
+        {
+            $order->items()->attach(
+                $item->id, 
+                [
+                'price'=>$item->price,
+                'quantity'=>$item->quantity
+                ]
+            );
+        }
+        
+        //shoppingCar empy
+        \Cart::session(auth()->id())->clear();
+
+        //dd('orden creada',$order);
+        return "orden completa";
     }
 
     /**
