@@ -33,6 +33,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
+                            
                             <!-- Authentication Links -->
                             @guest
                                 <li class="nav-item">
@@ -47,6 +48,14 @@
                                 @if ((Auth::user() != null) && (Auth::user()->role == "1"))
                                 <li style="margin:8px;font-size: 1rem"><a href="{{url('/dashboard')}}"><i class="fas fa-user-cog"></i></a></li>
                                 @endif
+                                <li class="nav-item">
+                                <a class="nav-link" href="{{ route('shoppingcart') }}">
+                                    <div class="badge badge-danger">
+                                        {{ Cart::session(auth()->id())->getContent()->count() }}    
+                                    </div>
+                                    <i class="fas fa-shopping-cart"></i>
+                                </a>
+                            </li>
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }} <span class="caret"></span>

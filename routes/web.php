@@ -4,10 +4,13 @@
 | Web Routes -Rutas web de navegacion libre
 |--------------------------------------------------------------------------
 */
+Route::redirect('/','/welcome');
+Route::get('/welcome', 'HomeController@index')->name('welcome'); 
 
-Route::get('/', 'GuestController@welcome')->name('/'); // Perfil del usuario
-Route::get('/product', 'GuestController@product')->name('product'); // Detalle Producto
-Route::get('/contact', 'GuestController@contact')->name('contact'); // Paguina de contactos
+
+
+Route::get('/product', 'GuestController@product')->name('product'); 
+Route::get('/contact', 'GuestController@contact')->name('contact'); 
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +19,20 @@ Route::get('/contact', 'GuestController@contact')->name('contact'); // Paguina d
 */
 
 Auth::routes();
-Route::get('/user', 'HomeController@userProfile')->name('user'); // Perfil del usuario
-Route::get('/shoppingcart', 'HomeController@shoppingcart')->name('shoppingcart'); // Shoppingcart
-Route::get('/checkout', 'HomeController@checkout')->name('checkout'); // Checkout
+Route::get('/user', 'HomeController@userProfile')->name('user')->middleware('auth');
+
+
+Route::get('/shoppingcart', 'CartController@shoppingcart')->name('shoppingcart')->middleware('auth'); 
+Route::get('/addToCart/{id}', 'CartController@add')->name('addToCart')->middleware('auth');
+Route::get('/destroyItem/{id}', 'CartController@destroyItem')->name('destroyItem')->middleware('auth');
+Route::get('/updateQuantity/{id}', 'CartController@updateQuantity')->name('updateQuantity')->middleware('auth');
+
+
+
+Route::get('/checkout', 'HomeController@checkout')->name('checkout')->middleware('auth'); 
+
+
+
 
 /*
 |--------------------------------------------------------------------------

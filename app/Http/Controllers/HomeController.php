@@ -1,12 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Products;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
+    public function index()
+    {
+        $products = Products::take(8)->get();
+
+        return view('welcome', compact('products'));
+    }
     /**
      * Create a new controller instance.
      *
@@ -14,7 +20,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**

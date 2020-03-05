@@ -7,11 +7,7 @@ use App\Products;
 
 class GuestController extends Controller
 {
-    public function welcome()
-    {
-        $products = Products::take(8)->get();
-        return view('welcome', ['products' => $products]);
-    }
+    
     
     public function product()
     {
