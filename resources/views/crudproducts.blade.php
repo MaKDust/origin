@@ -25,6 +25,7 @@
                  <a href="{{ route('createProduct') }}" class="btn btn-default">
                  <span class="fa fa-plus-circle">Agregar Producto</span></a>
                 </div>
+
             <table class="table">
                 <thead>
                     <tr>
@@ -42,7 +43,7 @@
                 <tbody>
                     @foreach($products as $product)
                     <tr>
-                        <td><img src="/img/{{$product->avatar}}" class="img-responsive img-fluid img-thumbnail rounded mx-auto d-block" style="height:40px;width:40px;margin-left:15px;"></td>
+                        <td><img src="/img/{{$product->avatar}}" class="img-responsive img-fluid rounded mx-auto d-block passphoto" style="height:40px;width:40px;margin-left:15px;"></td>
                         <td>{{$product->id}}</td>
                         <td>{{$product->name}}</td>
                         <td>{{$product->features}}</td>
