@@ -34,7 +34,8 @@ class OrderController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function storeOrder(Request $request)
-    {
+    {   
+        
         $request->validate([
             'shipping_name' => 'required',
             'shipping_lastname' => 'required',
@@ -47,10 +48,12 @@ class OrderController extends Controller
         ]);
 
         $order = new Order();
-
-        $order->order_number = uniqid('OrderNumber-');
+        $count = \Cart::session(auth()->id())->getContent()->count();
+        if ($count > 0) {
+            $order->order_number = uniqid('OrderNumber-');
 
         $order->grand_total = \Cart::session(auth()->id())->getTotal();
+
         $order->item_count = \Cart::session(auth()->id())->getContent()->count();
         $order->user_id = auth()->id();
 
@@ -91,20 +94,31 @@ class OrderController extends Controller
         $cartItems = \Cart::session(auth()->id())->getContent();
         foreach ($cartItems as $item) 
         {
-            $order->items()->attach(
-                $item->id, 
-                [
-                'price'=>$item->price,
-                'quantity'=>$item->quantity
-                ]
-            );
+            $order->items()->attach($item->id, ['price'=>$item->price,'quantity'=>$item->quantity]);
         }
         
         //shoppingCar empy
         \Cart::session(auth()->id())->clear();
 
         //dd('orden creada',$order);
-        return "orden completa";
+        return "orden completa, valla a pagar a /payment PAGINA PAGAR";
+
+        //paiment ('/payment', PaymentController@payment);
+
+        // if ('payment') {
+        //     $order  = Order::find($order_id);
+        //     $order->is_paid = 1;
+        //      $order->status = success;
+        //     $order->save();
+        //    \Cart::session(auth()->id())->clear();
+        //     return "gracias por su compra, envia mail de agradecimiento vuelve al home o lleva a su pagina de compras "MIS COMPRAS";
+        // }
+        }
+
+        else{
+            return redirect('welcome');
+        }
+        
     }
 
     /**

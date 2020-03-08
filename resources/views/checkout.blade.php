@@ -30,15 +30,15 @@
                                            <div class="row">
                                                 <div class="form-group col-lg-4">
                                                     <label for="">Nombre</label>
-                                                    <input type="text" name="shipping_name" id="" class="form-control">
+                                                    <input type="text" name="shipping_name" id="" class="form-control" required>
                                                 </div>
                                                 <div class="form-group col-lg-4">
                                                     <label for="">Apellido</label>
-                                                    <input type="text" name="shipping_lastname" id="" class="form-control">                                        
+                                                    <input type="text" name="shipping_lastname" id="" class="form-control" required>                                        
                                                 </div>
                                                 <div class="form-group col-lg-4">
                                                     <label for="">Numero de Celular</label>
-                                                    <input type="text" name="shipping_celphone" id="" class="form-control">                                            
+                                                    <input type="text" name="shipping_celphone" id="" class="form-control" required>                                            
                                                 </div>
                                             </div>
                                             <hr class="my-4">
@@ -46,23 +46,23 @@
                                             <div class="row">
                                                 <div class="col-md-4">
                                                     <label for="">Direccion</label>
-                                                    <input type="text" name="shipping_address" id="" class="form-control"> 
+                                                    <input type="text" name="shipping_address" id="" class="form-control" required> 
                                                 </div>
                                                 <div class="col-md-2">
                                                     <label for="">Codigo Postal</label>
-                                                    <input type="text" name="shipping_zipcode" id="" class="form-control"> 
+                                                    <input type="text" name="shipping_zipcode" id="" class="form-control" required> 
                                                 </div>
                                                 <div class="col-md-2">
                                                     <label for="">Pais</label>
-                                                    <input type="text" name="shipping_country" id="" class="form-control"> 
+                                                    <input type="text" name="shipping_country" id="" class="form-control" required> 
                                                 </div>
                                                     <div class="col-md-2">
                                                     <label for="">Provincia</label>
-                                                    <input type="text" name="shipping_state" id="" class="form-control"> 
+                                                    <input type="text" name="shipping_state" id="" class="form-control" required> 
                                                 </div>
                                                     <div class="col-md-2">
                                                     <label for="">Ciudad</label>
-                                                    <input type="text" name="shipping_city" id="" class="form-control"> 
+                                                    <input type="text" name="shipping_city" id="" class="form-control" required> 
                                                 </div>
                                             </div>
                                             <hr class="my-4">

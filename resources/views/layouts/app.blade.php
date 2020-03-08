@@ -19,6 +19,7 @@
     <!-- Styles -->
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div class="wrapper">
@@ -47,13 +48,13 @@
                             @else
                                 
                                 <li class="nav-item">
-                                <a class="nav-link" href="{{ route('shoppingcart') }}">
-                                    <div class="badge badge-danger">
-                                        {{ Cart::session(auth()->id())->getContent()->count() }}    
-                                    </div>
-                                    <i class="fas fa-shopping-cart"></i>
-                                </a>
-                            </li>
+                                    <a class="nav-link" href="{{ route('shoppingcart') }}">
+                                        <div class="badge badge-danger">
+                                            {{ Cart::session(auth()->id())->getContent()->count() }}
+                                        </div>
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                </li>
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->name }} <span class="caret"></span>
