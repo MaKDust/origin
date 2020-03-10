@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+<nav></nav>
 <div class="wrapper wrapperA">
     <div class="col1">
 
