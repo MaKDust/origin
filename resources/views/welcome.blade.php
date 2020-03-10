@@ -67,7 +67,7 @@
                         <h3>${{ $product->price }}</h3>
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group" >
-                          <a  class="card-link btn btn-sm btn-warning"><i class="fas fa-eye"></i></a>
+                          <a  href="{{ route('Product', $product->id ) }}" class="card-link btn btn-sm btn-warning"><i class="fas fa-eye"></i></a>
                           <a  href="{{ route('addToCart', $product->id ) }}" class="card-link btn btn-sm btn-danger"><i class="fas fa-cart-plus"></i></a>
                         </div>
                         <small class="text-muted">Stock: {{ $product->stock }}</small>

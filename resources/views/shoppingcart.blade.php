@@ -21,7 +21,7 @@
                                
                                <thead class="thead-dark|thead-light">
                                  <tr>
-                                   
+                                   <th scope="col">avatar</th>
                                    <th scope="col">Nombre</th>
                                    <th scope="col">Precio</th>
                                    <th scope="col">Cantidad</th>
@@ -31,7 +31,8 @@
                                <tbody>
                                 @foreach ($cartItems as $item)
                                  <tr>
-                                   <th scope="row">{{ $item->name }}</th>
+                                    <td><img src="/img/{{ $item->avatar }}" class="img-responsive img-fluid rounded mx-auto d-block passphoto" style="height:40px;width:40px;margin-left:15px;"></td>
+                                   <th scope="row"><a href="{{ route('Product', $item->id ) }}">{{ $item->name }}</a></th>
                                     <td>${{Cart::session(auth()->id())->get($item->id)->getPriceSum()}}</td>
                                     <td>
                                         <form action="{{ route('updateQuantity', $item->id) }}">

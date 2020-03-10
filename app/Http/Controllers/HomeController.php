@@ -15,7 +15,13 @@ class HomeController extends Controller
     }
 
     public function search(Request $request){
+
         return view('search-results');
+    }
+    public function Product($id){   
+    
+        $products = Products::findOrFail($id);
+        return view('product', compact('products'));
     }
     /**
      * Create a new controller instance.

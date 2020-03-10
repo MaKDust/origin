@@ -25,8 +25,8 @@ class CartController extends Controller
 			)
 		);
 
-
-		return redirect()->route('shoppingcart');
+        dd($products);
+		return back();
     }
 
     public function shoppingcart()
