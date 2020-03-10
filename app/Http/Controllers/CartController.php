@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Auth; 
+use Illuminate\Support\Facades\Auth;
 use App\Products;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
-	public function add($id) 
-    
-    { 
+	public function add($id)
+
+    {
      	$products = Products::findOrFail($id);
-     	
+
 		\Cart::session(auth()->id())->add(
 			array(
 			    'id' => $products->id,
@@ -25,12 +25,12 @@ class CartController extends Controller
 			)
 		);
 
-        dd($products);
+        //dd($products);
 		return back();
     }
 
     public function shoppingcart()
-    
+
     {
     	$cartItems = \Cart::session(auth()->id())->getContent();
 
@@ -38,7 +38,7 @@ class CartController extends Controller
     }
 
     public function destroyItem($itemId)
-    
+
     {
     	\Cart::session(auth()->id())->remove($itemId);
 
@@ -46,11 +46,11 @@ class CartController extends Controller
     }
 
     public function updateQuantity($rowId)
-    
+
     {
     	\Cart::session(auth()->id())->update($rowId, [
     		'quantity' =>	[
-    			'relative'	=> false, 
+    			'relative'	=> false,
     			'value'		=> request('quantity')
     		]
     	]);
