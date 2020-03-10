@@ -1,9 +1,37 @@
 @extends('layouts.app')
+@section('AdminNav')
+@if ((Auth::user() != null) && (Auth::user()->role == "1"))
+            <div>
+                <button class="btn btn-primary"><a class="nav-link" href="{{url('/metrics')}}"><i class="fas fa-chart-bar"></i>Metrica</a></button>
+                <button class="btn btn-success"><a class="nav-link" href="{{url('/crudproducts')}}"><i class="fas fa-boxes"></i>Produtos</a></button>
+                <button class="btn btn-danger"> <a class="nav-link" href="{{url('/crudusers')}}"><i class="fas fa-users"></i>Usuarios</a></button>
+            </div>
+            @endif
 
-@section('content')
-<nav></nav>
-<div class="wrapper wrapperA">
-    <div class="col1">
+@endsection
+
+
+{{-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collsapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a href="{{url('/metrics')}}"><i class="fas fa-chart-bar"></i>Metrica</a>
+      </li>
+      <li class="nav-item">
+        <a href="{{url('/crudproducts')}}"><i class="fas fa-boxes"></i>Produtos</a>
+      </li>
+      <li class="nav-item">
+        <a href="{{url('/crudusers')}}"><i class="fas fa-users"></i>Usuarios</a>
+      </li>      
+    </ul>
+  </div>
+</nav> --}}
+ 
+
+ {{--    <div class="col1">
 
         <div class="sidebar shadow">
             
@@ -41,15 +69,15 @@
 
         </div>
 
-    </div>
+    </div> --}}
 
-    <div class="col2">
+    
         
         <div class="page">
             @section('content')
         </div>
-    </div>
+  {{--   </div>
 
-</div>
+</div> --}}
 
 @endsection

@@ -29,15 +29,15 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <td><strong>Avatar</strong></td>
-                        <td><strong>Id</strong></td>                        
-                        <td><strong>Nombre</strong></td>
-                        <td><strong>Caracteristicas</strong></td>
-                        <td><strong>Descripcion</strong></td>
-                        <td><strong>Stock</strong></td>
-                        <td><strong>Precio</strong></td>
-                        <td><strong>Precio Oferta</strong></td>
-                        <td><strong>Acciones</strong></td>
+                        <th scope="col"><strong>Avatar</strong></th>
+                        <th scope="col"><strong>Id</strong></th>                        
+                        <th scope="col"><strong>Nombre</strong></th>
+                        <th scope="col"><strong>Caracteristicas</strong></th>
+                        <th scope="col"><strong>Descripcion</strong></th>
+                        <th scope="col"><strong>Stock</strong></th>
+                        <th scope="col"><strong>Precio</strong></th>
+                        <th scope="col"><strong>Precio Oferta</strong></th>
+                        <th scope="col"><strong>Acciones</strong></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -63,7 +63,7 @@
                     </tr>
                     @endforeach
                 </tbody>
-            </table>
+            </table>s
             
         </div>
     </div>

@@ -25,7 +25,7 @@ class CartController extends Controller
 			)
 		);
 
-        dd($products);
+        //dd($products);
 		return back();
     }
 
