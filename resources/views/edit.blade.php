@@ -49,8 +49,23 @@
                                     <div class="card shadow py-2" >
                                         <img class="img-fluid img-thumbnail rounded mx-auto d-block" src="{{($users->avatar)}}" style="height: 100px;width: 100px;">
                                     </div>
-                                    <strong>Roll</strong><br>
-                                    <input type="text" class="form-control" name="role" value="{{ $users->role }}" style="text-align: center;">
+
+                                    {{-- <strong>Roll</strong><br>
+                                    <input type="text" class="form-control" name="role" value="{{ $users->role }}" style="text-align: center;"> --}}
+
+                                    <div class="form-group row">
+                                        <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Roll') }}</label>
+
+                                        <div class="col-md-6">
+                                            <input id="role" type="text" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ old('role') }}" required autocomplete="name" autofocus>
+
+                                            @error('role')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+                                    </div>
                                     
                                 </div>
 
