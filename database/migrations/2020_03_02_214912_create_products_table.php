@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('description');
             $table->integer('stock');
             $table->float('price');
-            $table->integer('quantity');
+            $table->integer('quantity')->default(0);
             $table->float('salePrice');
             $table->string('avatar');
             $table->timestamps();

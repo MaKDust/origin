@@ -13,6 +13,10 @@ class HomeController extends Controller
 
         return view('welcome', compact('products'));
     }
+
+    public function search(Request $request){
+        return view('search-results');
+    }
     /**
      * Create a new controller instance.
      *

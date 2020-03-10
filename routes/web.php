@@ -6,11 +6,9 @@
 */
 Route::redirect('/','/welcome');
 Route::get('/welcome', 'HomeController@index')->name('welcome'); 
-
-
-
 Route::get('/product', 'GuestController@product')->name('product'); 
-Route::get('/contact', 'GuestController@contact')->name('contact'); 	
+Route::get('/contact', 'GuestController@contact')->name('contact');
+Route::get('/search', 'HomeController@search')->name('search');	
 
 /*
 |--------------------------------------------------------------------------

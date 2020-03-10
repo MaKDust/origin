@@ -48,8 +48,10 @@ class OrderController extends Controller
         ]);
 
         $order = new Order();
+
         $count = \Cart::session(auth()->id())->getContent()->count();
         if ($count > 0) {
+
             $order->order_number = uniqid('OrderNumber-');
 
         $order->grand_total = \Cart::session(auth()->id())->getTotal();
@@ -110,6 +112,8 @@ class OrderController extends Controller
         //     $order->is_paid = 1;
         //      $order->status = success;
         //     $order->save();
+        
+
         //    \Cart::session(auth()->id())->clear();
         //     return "gracias por su compra, envia mail de agradecimiento vuelve al home o lleva a su pagina de compras "MIS COMPRAS";
         // }
