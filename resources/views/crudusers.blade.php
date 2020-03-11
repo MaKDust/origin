@@ -3,37 +3,33 @@
 @section('content')
 
 @if($messaje = Session::get('success'))
-<div class="alert alert-success alert-dismissible fade in show" role="alert">
-    <p>{{ $messaje }}</p>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
+    <div class="alert alert-success alert-dismissible fade in show" role="alert">
+        <p>{{ $messaje }}</p>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
 @endif
-
-<div class="container-fluid">
-    <div class="panel shadow">
-        <div class="header">
-            <h2 class="title" style="font-size: 1.5rem;">
-                <i class="fas fa-users" style="margin-right: 10px;"></i>
-                 Usuarios
-            </h2>
-        </div>
-
-        <div class="inside">
-            <table class="table">
-                <thead>
+         
+            <div class="table-users">
+                 <div>
+                    <div class="header"><i class="fas fa-users" style="margin-right: 10px;"></i>
+                    Usuarios</div>
+                    
+                </div>
+                <table class="tab" cellspacing="0">
+                <tbody>
                     <tr>
-                        <td><strong>Avatar</strong></td>
-                        <td><strong>Id</strong></td>                        
-                        <td><strong>Nombre</strong></td>
-                        <td><strong>Apellido</strong></td>
-                        <td><strong>Email</strong></td>
-                        <td><strong>Rol</strong></td>
+                        <td>>Avatar</td>
+                        <td>>Id</td>                        
+                        <td>>Nombre</td>
+                        <td>>Apellido</td>
+                        <td>>Email</td>
+                        <td>>Rol</td>
                         <td></td>
                     </tr>
-                </thead>
-                <tbody>
+                
+                
                     @foreach($users as $user)
                     <tr>
                         <td><img src="{{$user->avatar}}" class="img-responsive img-fluid img-thumbnail rounded mx-auto d-block" style="height:40px;width:40px;margin-left:15px;"></td>
@@ -55,9 +51,10 @@
                     @endforeach
                 </tbody>
             </table>
+           
             
-        </div>
+        
     </div>
-</div>
+
 {{ $users->links() }}
 @endsection

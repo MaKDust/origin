@@ -3,51 +3,44 @@
 @section('content')
 
 @if($messaje = Session::get('success'))
-<div class="alert alert-success alert-dismissible fade in show" role="alert">
-    <p>{{ $messaje }}</p>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
+    <div class="alert alert-success alert-dismissible fade in show" role="alert">
+        <p>{{ $messaje }}</p>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
 @endif
 
-<div class="container-fluid">
-    <div class="panel shadow">
-        <div class="header">
-            <h2 class="title" style="font-size: 1.5rem;">
-                <i class="fas fa-boxes" style="margin-right: 10px;"></i>
-                Productos
-            </h2>
-        </div>
-
-        <div class="inside">
-            <div align="right">
-                 <a href="{{ route('createProduct') }}" class="btn btn-default">
-                 <span class="fa fa-plus-circle">Agregar Producto</span></a>
+             <div class="table-users">
+                <div>
+                    <div class="header"><i class="fas fa-boxes" style="margin-right: 10px;"></i>Productos</div>
+                    <div align="right">
+                         <a href="{{ route('createProduct') }}" class="btn btn-default">
+                         <span class="fa fa-plus-circle">Agregar Producto</span></a>
+                    </div>
                 </div>
-
-            <table class="table">
-                <thead>
+                <table class="tab" cellspacing="0">
+                    <tbody>
                     <tr>
-                        <th scope="col"><strong>Avatar</strong></th>
-                        <th scope="col"><strong>Id</strong></th>                        
-                        <th scope="col"><strong>Nombre</strong></th>
-                        <th scope="col"><strong>Caracteristicas</strong></th>
-                        <th scope="col"><strong>Descripcion</strong></th>
-                        <th scope="col"><strong>Stock</strong></th>
-                        <th scope="col"><strong>Precio</strong></th>
-                        <th scope="col"><strong>Precio Oferta</strong></th>
-                        <th scope="col"><strong>Acciones</strong></th>
+                        <th>Avatar</th>
+                        <th>Id</th>                        
+                        <th>Nombre</th>
+                        <th>Caracteristicas</th>
+                        <th width="230">Descripcion</th>
+                        <th>Stock</th>
+                        <th>Precio</th>
+                        <th>Precio Oferta</th>
+                        <th>Acciones</th>
                     </tr>
-                </thead>
-                <tbody>
+                
+                
                     @foreach($products as $product)
                     <tr>
-                        <td><img src="/img/{{$product->avatar}}" class="img-responsive img-fluid rounded mx-auto d-block passphoto" style="height:40px;width:40px;margin-left:15px;"></td>
+                        <td><img src="/img/{{$product->avatar}}" class="imgCrud" /></td>
                         <td>{{$product->id}}</td>
                         <td>{{$product->name}}</td>
-                        <td>{{$product->features}}</td>
-                        <td>{{$product->description}}</td>
+                        <td>{{str_limit($product->features, 15)}}</td>
+                        <td>{{str_limit($product->description, 15)}}</td>
                         <td>{{$product->stock}}</td>
                         <td>{{$product->price}}</td>
                         <td>{{$product->salePrice}}</td>
@@ -63,10 +56,8 @@
                     </tr>
                     @endforeach
                 </tbody>
-            </table>s
-            
+            </table>
         </div>
-    </div>
-</div>
+ 
 {{ $products->links() }}
 @endsection
