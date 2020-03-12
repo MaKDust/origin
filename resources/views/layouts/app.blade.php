@@ -32,16 +32,7 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <ul class="navbar-nav col-6 justify-content-center" style="padding-right: 0px;padding-left: 15px;">
-                        <form action="{{ route('search') }}" method="GET" class="form-inline search-form ">
-                            @csrf
-                            <div class="input-group md-3" >
-                                <input type="text" name="query" id="query" class="form-control search-box"  placeholder="Encuentra produc" style="border-radius: 25px;">
-                                
-                            </div>
-
-                        </form>
-                    </ul>
+                    
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
                             
