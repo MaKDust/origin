@@ -1,5 +1,6 @@
 @extends('layouts.app')
 @section('AdminNav')
+ <hr class="mt-1">
 @if ((Auth::user() != null) && (Auth::user()->role == "1"))
             <div class="adminButtons ">
                 <button class="btn btn-outline-primary btn-xs"><a class="nav-link" href="{{url('/metrics')}}"><i class="fas fa-chart-bar"></i></a></button>

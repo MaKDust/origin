@@ -1,37 +1,34 @@
 @extends('layouts.app')
 
 @section('content')
+<hr class="mt-2">
 <div class="search-container container">
-
+                <a  href="{{ route('addToCart', $products->id ) }}" class="card-link btn btn-sm btn-success float-right"><i class="fas fa-cart-plus"> Agregar al carrito</i></a> 
+                <a  href="{{ URL::previous() }}" class="card-link btn btn-sm btn-warning"><i class="fas fa-arrow-left"> Volver</i></a> 
     <div class="row justify-content-center">
+           
+        <div class="col-md-12">
 
-        <div class="col-md-10">
 
-            <div class="card">
-
+            <div class="card">                
                 
-                <div class="card-body">
-
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
+                       
 
                     <section class="container-fluid perfil">
-                        
-                            <div class="row">   
 
-                                <div class="col-md-6"> 
-
+                            <div class="row">
+                                <div class="col-md-6">
                                     <div class="card shadow">
                                         <h4 class="text-center" style=" margin-top: 5px;">{{ $products->name }}</h4> 
                                         <div class="card shadow" >
                                             <img class="img-fluid img-thumbnail rounded mx-auto d-block" src="/img/{{($products->avatar)}}" style="height: 300px;width: 300px;">
-                                        </div>
-                                        
+                                        </div>                                       
                                     </div>
-
                                 </div>
 
                                 <div class="col-md-6">
@@ -40,9 +37,9 @@
 
                                         <div class="card-header bg-white border-0" >
                                             <div class="row align-items-center">
-                                                <div class="col-8">
-                                                    <h3 class="mb-0 ">Detalle Producto</h3>
-                                                </div>
+                                               
+                                                    <h3 class="mb-0 text-center">Detalle Producto</h3>
+                                               
                                             </div>
                                         </div>
 
@@ -97,13 +94,13 @@
                                 </div>
                                 
                             </div>
-                            <a  href="{{ route('addToCart', $products->id ) }}" class="card-link btn btn-sm btn-danger"><i class="fas fa-cart-plus"></i></a>
-                           
+                            
+                          
                             
                        
                     </section> 
 
-                </div>
+                
 
             </div>
 

@@ -8795,38 +8795,25 @@ body,
 html {
 	padding: 0px;
 	margin: 0px;
-	
 }
 
 .wrapperA {
 	min-height: calc(100% - 81px);
 	overflow: relative;
-	
 	position: relative;
 }
 
-
-
-
-
-
-
-
-
-
 /* CAROUSEL */
 
-/* Carousel base class */
 .carousel {
   margin-bottom: 4rem;
 }
-/* Since positioning the image, we need to help out the caption */
+
 .carousel-caption {
   bottom: 3rem;
   z-index: 10;
 }
 
-/* Declare heights because of positioning of img element */
 .carousel-item {
   height: 32rem;
   background-color: #777;
@@ -8881,7 +8868,7 @@ html {
   width: 60px;
 }
 
-.table-users {
+.table-table {
   border: 1px solid #327a81;
   border-radius: 10px;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
@@ -8894,86 +8881,80 @@ html {
 .tab {
   width: 100%;
 }
-.tab td, th {
+.tab .td, .th {
   color: #2b686e;
   padding: 10px;
 }
-.tab td {
+.tab .td {
   text-align: center;
   vertical-align: middle;
 }
-.tab td:last-child {
+.tab .td:last-child {
   font-size: 0.95em;
   line-height: 1.4;
   text-align: left;
 }
-.tab th {
+.tab .th {
   background-color: #daeff1;
   font-weight: 300;
 }
-.tab tr:nth-child(2n) {
+.tab .tr:nth-child(2n) {
   background-color: white;
 }
-.tab tr:nth-child(2n+1) {
+.tab .tr:nth-child(2n+1) {
   background-color: #edf7f8;
 }
 
 @media screen and (max-width: 700px) {
-  .tab, tr, td {
-    display: block;
+  .tab, .tr, .td {
+    display: inline-block;
   }
 
-  td:first-child {
+  .td:first-child {
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
     width: 100px;
   }
-  td:not(:first-child) {
+  .td:not(:first-child) {
     clear: both;
     margin-left: 100px;
     padding: 4px 20px 4px 90px;
     position: relative;
     text-align: left;
   }
-  td:not(:first-child):before {
+  .td:not(:first-child):before {
     color: #91ced4;
     content: '';
     display: block;
     left: 0;
     position: absolute;
   }
-  td:nth-child(2):before {
-    content: 'Id:';
+  .td:nth-child(2):before {
+    content: 'nombre:';
   }
-  td:nth-child(3):before {
-    content: 'Nombre:';
-  }
-  td:nth-child(4):before {
+  .td:nth-child(3):before {
     content: 'Caracteristicas:';
   }
-  td:nth-child(5):before {
+  .td:nth-child(4):before {
     content: 'Descripcion:';
   }
-  td:nth-child(6):before {
+  .td:nth-child(5):before {
     content: 'Stock:';
   }
-  td:nth-child(7):before {
+  .td:nth-child(6):before {
     content: 'Precio:';
   }
-  td:nth-child(8):before {
-    content: 'Precio Oferta:';
-  }
-  td:nth-child(9):before {
-    content: 'Acciones';
+  .td:nth-child(7):before {
+    content: 'Acciones:';
   }
 
-  tr {
+  .tr {
     padding: 10px 0;
     position: relative;
   }
-  tr:first-child {
+  .tr:first-child {
     display: none;
   }
 }
@@ -8995,7 +8976,7 @@ html {
     width: 100px;
   }
 
-  td:first-child {
+  .td:first-child {
     background-color: #c8e7ea;
     border-bottom: 1px solid #91ced4;
     border-radius: 10px 10px 0 0;
@@ -9005,21 +8986,21 @@ html {
             transform: translateY(0);
     width: 100%;
   }
-  td:not(:first-child) {
+  .td:not(:first-child) {
     margin: 0;
     padding: 5px 1em;
     width: 100%;
   }
-  td:not(:first-child):before {
+  .td:not(:first-child):before {
     font-size: .8em;
     padding-top: 0.3em;
     position: relative;
   }
-  td:last-child {
+  .td:last-child {
     padding-bottom: 1rem !important;
   }
 
-  tr {
+  .tr {
     background-color: white !important;
     border: 1px solid #6cbec6;
     border-radius: 10px;
@@ -9035,10 +9016,6 @@ html {
   }
 }
 
-tbody{
-	width: 100%;
-	display: inline-block;
-}
 
 .adminButtons{
 	
@@ -9047,4 +9024,234 @@ tbody{
 
 
 
+}
+
+/*crud users*/
+
+.tab .tdu, .thu {
+  color: #2b686e;
+  padding: 10px;
+}
+.tab .tdu {
+  text-align: center;
+  vertical-align: middle;
+}
+.tab .tdu:last-child {
+  font-size: 0.95em;
+  line-height: 1.4;
+  text-align: left;
+}
+.tab .thu {
+  background-color: #daeff1;
+  font-weight: 300;
+}
+.tab .tru:nth-child(2n) {
+  background-color: white;
+}
+.tab .tru:nth-child(2n+1) {
+  background-color: #edf7f8;
+}
+
+@media screen and (max-width: 700px) {
+  .tab, .tru, .tdu {
+    display: inline-block;
+  }
+
+  .tdu:first-child {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 100px;
+  }
+  .tdu:not(:first-child) {
+    clear: both;
+    margin-left: 100px;
+    padding: 4px 20px 4px 90px;
+    position: relative;
+    text-align: left;
+  }
+  .tdu:not(:first-child):before {
+    color: #91ced4;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+  }
+  .tdu:nth-child(2):before {
+    content: 'nombre:';
+  }
+  .tdu:nth-child(3):before {
+    content: 'apellido:';
+  }
+  .tdu:nth-child(4):before {
+    content: 'Email:';
+  }
+  .tdu:nth-child(5):before {
+    content: 'Rol:';
+  }
+  .tdu:nth-child(6):before {
+    content: 'Acciones:';
+  }
+
+  .tru {
+    padding: 10px 0;
+    position: relative;
+  }
+  .tru:first-child {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  
+
+  .tdu:first-child {
+    background-color: #c8e7ea;
+    border-bottom: 1px solid #91ced4;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    top: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    width: 100%;
+  }
+  .tdu:not(:first-child) {
+    margin: 0;
+    padding: 5px 1em;
+    width: 100%;
+  }
+  .tdu:not(:first-child):before {
+    font-size: .8em;
+    padding-top: 0.3em;
+    position: relative;
+  }
+  .tdu:last-child {
+    padding-bottom: 1rem !important;
+  }
+
+  .tru {
+    background-color: white !important;
+    border: 1px solid #6cbec6;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    margin: 0.5rem 0;
+    padding: 0;
+  }
+
+  
+}
+
+
+/*shoppingcart*/
+
+
+.tab .tds, .ths {
+  color: #2b686e;
+  padding: 10px;
+}
+.tab .tds {
+  text-align: center;
+  vertical-align: middle;
+}
+.tab .tds:last-child {
+  font-size: 0.95em;
+  line-height: 1.4;
+  text-align: left;
+}
+.tab .ths {
+  background-color: #daeff1;
+  font-weight: 300;
+}
+.tab .trs:nth-child(2n) {
+  background-color: white;
+}
+.tab .trs:nth-child(2n+1) {
+  background-color: #edf7f8;
+}
+
+@media screen and (max-width: 700px) {
+  .tab, .trs, .tds {
+    display: inline-block;
+  }
+
+  .tds:first-child {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 100px;
+  }
+  .tds:not(:first-child) {
+    clear: both;
+    margin-left: 100px;
+    padding: 4px 20px 4px 90px;
+    position: relative;
+    text-align: left;
+  }
+  .tds:not(:first-child):before {
+    color: #91ced4;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+  }
+  .tds:nth-child(2):before {
+    content: 'nombre:';
+  }
+  .tds:nth-child(3):before {
+    content: 'precio:';
+  }
+  .tds:nth-child(4):before {
+    content: 'cantidad:';
+  }
+  .tds:nth-child(5):before {
+    content: 'Acciones:';
+  }
+ 
+
+  .trs {
+    padding: 10px 0;
+    position: relative;
+  }
+  .trs:first-child {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  
+
+  .tds:first-child {
+    background-color: #c8e7ea;
+    border-bottom: 1px solid #91ced4;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    top: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    width: 100%;
+  }
+  .tds:not(:first-child) {
+    margin: 0;
+    padding: 5px 1em;
+    width: 100%;
+  }
+  .tds:not(:first-child):before {
+    font-size: .8em;
+    padding-top: 0.3em;
+    position: relative;
+  }
+  .tds:last-child {
+    padding-bottom: 1rem !important;
+  }
+
+  .trs {
+    background-color: white !important;
+    border: 1px solid #6cbec6;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    margin: 0.5rem 0;
+    padding: 0;
+  }
+
+  
 }

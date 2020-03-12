@@ -11,7 +11,7 @@
     </div>
 @endif
 
-             <div class="table-users">
+             <div class="table-table">
                 <div>
                     <div class="header"><i class="fas fa-boxes" style="margin-right: 10px;"></i>Productos</div>
                     <div align="right">
@@ -21,36 +21,34 @@
                 </div>
                 <table class="tab" cellspacing="0">
                     <tbody>
-                    <tr>
-                        <th>Avatar</th>
-                        <th>Id</th>                        
-                        <th>Nombre</th>
-                        <th>Caracteristicas</th>
-                        <th width="230">Descripcion</th>
-                        <th>Stock</th>
-                        <th>Precio</th>
-                        <th>Precio Oferta</th>
-                        <th>Acciones</th>
+                    <tr class="tr">
+                        <th class="th">Avatar</th>                                      
+                        <th class="th">Nombre</th>
+                        <th class="th">Caracteristicas</th>
+                        <th width="230" class="th">Descripcion</th>
+                        <th class="th">Stock</th>
+                        <th class="th">Precio</th>                      
+                        <th class="th">Acciones</th>
                     </tr>
                 
                 
                     @foreach($products as $product)
-                    <tr>
-                        <td><img src="/img/{{$product->avatar}}" class="imgCrud" /></td>
-                        <td>{{$product->id}}</td>
-                        <td>{{$product->name}}</td>
-                        <td>{{str_limit($product->features, 15)}}</td>
-                        <td>{{str_limit($product->description, 15)}}</td>
-                        <td>{{$product->stock}}</td>
-                        <td>{{$product->price}}</td>
-                        <td>{{$product->salePrice}}</td>
-                        <td>
+                    <tr class="tr">
+                        <td class="td"><img src="/img/{{$product->avatar}}" class="imgCrud" /></td>
+                        
+                        <td class="td">{{$product->name}}</td>
+                        <td class="td">{{str_limit($product->features, 15)}}</td>
+                        <td class="td">{{str_limit($product->description, 15)}}</td>
+                        <td class="td">{{$product->stock}}</td>
+                        <td class="td">{{$product->price}}</td>
+                       
+                        <td class="td">
                             <form action="{{ route('destroyProduct', $product->id) }}" method="post">
                                 @method('GET')
                                 @csrf
-                                <button type="submit" class="btn btn-danger" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="far fa-trash-alt" ></i></button>
-                                <a href="{{ route('showProduct', $product->id) }}" class="btn btn-warning" data-toggle="tooltip" data-placement="top" title="Ver"><i class="far fa-eye"></i></a>
-                                <a href="{{ route('editProduct', $product->id) }}" class="btn btn-info" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fas fa-user-edit"></i></a>
+                                <button type="submit" class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Eliminar"><i class="far fa-trash-alt" ></i></button>
+                                <a href="{{ route('showProduct', $product->id) }}" class="btn btn-warning btn-xs" data-toggle="tooltip" data-placement="top" title="Ver"><i class="far fa-eye"></i></a>
+                                <a href="{{ route('editProduct', $product->id) }}" class="btn btn-info btn-xs" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fas fa-user-edit"></i></a>
                             </form>
                         </td>
                     </tr>
