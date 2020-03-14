@@ -8,6 +8,7 @@
         <div class="container">
             <div class="row">
             @foreach ($products as $product)
+            @if($product->stock > 0)
               <div class="col-lg-3 d-flex align-items-stretch py-3">
                   <div class="card mb-3 box-shadow" style="box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .15);">
                     <div class="card-header bg-transparent" style="height: 55%;border:none;">
@@ -27,6 +28,7 @@
                     </div>
                   </div>
                 </div>
+                @endif
             @endforeach
            </div>
         </div>

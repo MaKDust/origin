@@ -12,7 +12,7 @@ class CartController extends Controller
 
     {
      	$products = Products::findOrFail($id);
-
+     	if ($products->stock > 1){
 		\Cart::session(auth()->id())->add(
 			array(
 			    'id' => $products->id,
@@ -27,6 +27,8 @@ class CartController extends Controller
 
         //dd($products);
 		return back();
+		}else
+		return "no hat stock";//QUE VA HA HACER?? O DIRECTAMENTE NO APARECE
     }
 
     public function shoppingcart()
