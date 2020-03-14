@@ -82,10 +82,7 @@
                                                         {{ $products->price }}
                                                     </div>
 
-                                                    <div class="form-group  col-md-4">
-                                                        <strong>Oferta</strong><br>
-                                                         {{ $products->salePrice }}
-                                                    </div>
+                                                    
                                                     
                                             </div>
 

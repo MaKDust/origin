@@ -66,23 +66,8 @@
                                                 </div>
                                             </div>
                                             <hr class="my-4">
-                                            <h6 class="heading-small text-muted mb-4">Formas de pago</h6>
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                <div class="form-check">
-                                                    <label class="form-check-label">
-                                                    <input type="radio" class="form-check-input" name="payment_method" id="" value="cash_on_delivery">Contra reenvolso
-                                                    </label>
-                                                </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                <div class="form-check">
-                                                    <label class="form-check-label">
-                                                    <input type="radio" class="form-check-input" name="payment_method" id="" value="paypal">Paypal
-                                                    </label>
-                                                </div>
-                                                </div>
-                                            </div>
+                                            <h6 class="heading-small text-muted mb-4">Pagar</h6>
+                                            
                                         </div>
                                     </div>
                                 </div>

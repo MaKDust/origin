@@ -12,12 +12,6 @@ $factory->define(Products::class, function (Faker $faker) {
        'description' => $faker->sentence(20),
        'stock' => $faker->numberBetween(1,50),
        'price' => $faker->numberBetween(100,200),
-       'salePrice' => $faker->numberBetween(1,99),
-
-
        'avatar' => $faker->image('public/img',640,480,null,false),
-       //('resourse/img/default-pro.jpg'),
-
-
     ];
 });

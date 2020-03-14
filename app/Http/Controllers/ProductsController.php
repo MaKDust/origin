@@ -33,7 +33,7 @@ class ProductsController extends Controller
             'description'   =>  'required',
             'stock'         =>  'required|min:1',
             'price'         =>  'required',
-            'salePrice'     =>  'required',
+            
             'avatar'        =>  'required'
         ]);
 
@@ -48,7 +48,7 @@ class ProductsController extends Controller
             'description'   =>  $request->description,
             'stock'         =>  $request->stock,
             'price'         =>  $request->price,
-            'salePrice'     =>  $request->salePrice,
+            
             'avatar'        =>  $avatarname
         );
 
@@ -88,8 +88,7 @@ class ProductsController extends Controller
             'features'      =>  'required',
             'description'   =>  'required',
             'stock'         =>  'required|min:1',
-            'price'         =>  'required',
-            'salePrice'     =>  'required',
+            'price'         =>  'required',            
             'avatar'        =>  'image'
             ]);
 
@@ -104,7 +103,7 @@ class ProductsController extends Controller
             'description'   =>  $request->description,
             'stock'         =>  $request->stock,
             'price'         =>  $request->price,
-            'salePrice'     =>  $request->salePrice,
+            
             'avatar'        =>  $avatarname
             );
 
@@ -117,7 +116,7 @@ class ProductsController extends Controller
             'description'   =>  'required',
             'stock'         =>  'required|min:1',
             'price'         =>  'required',
-            'salePrice'     =>  'required'
+            
             
             ]);
    
@@ -128,7 +127,7 @@ class ProductsController extends Controller
             'description'   =>  $request->description,
             'stock'         =>  $request->stock,
             'price'         =>  $request->price,
-            'salePrice'     =>  $request->salePrice
+            
             
             );
 

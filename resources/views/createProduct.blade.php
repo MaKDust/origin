@@ -88,15 +88,7 @@
                                        </span>
                                        @enderror
                                     </div>
-                                    <div class="form-group col-lg-6">
-                                       <label for="salePrice" class="col-md-4 col-form-label text-md-right">{{ __('Oferta') }}</label>
-                                       <input id="salePrice" type="number" class="form-control @error('salePrice') is-invalid @enderror" name="salePrice" value="{{ old('salePrice') }}" required autocomplete="salePrice" autofocus>
-                                       @error('salePrice')
-                                       <span class="invalid-feedback" role="alert">
-                                       <strong>{{ $message }}</strong>
-                                       </span>
-                                       @enderror
-                                    </div>
+                                    
                                     <div class="form-group  col-md-8">
                                        <strong>Imagen</strong><br>
                                        <input type="file" name="avatar" id="avatar" class="form-control" style="border: none;">

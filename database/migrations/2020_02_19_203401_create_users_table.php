@@ -23,11 +23,11 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('lastname')->default('guest');
             $table->string('address')->default('guest');
-            $table->integer('celphone')->default('555');
+            $table->integer('celphone')->default('000');
             $table->string('country')->default('guest');
             $table->string('state')->default('guest');
             $table->string('city')->default('guest');
-            $table->string('zipcode')->default('guest');//ACTUALIZAR
+            $table->string('zipcode')->default('guest');
             $table->rememberToken();
             $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();

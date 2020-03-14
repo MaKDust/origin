@@ -37,17 +37,7 @@ class CreateOrdersTable extends Migration
             $table->string('shipping_state');
             $table->string('shipping_city');
             $table->string('shipping_zipcode');
-            $table->string('notes')->nullable();
-
-            $table->string('billing_name');
-            $table->string('billing_lastname');
-            $table->string('billing_address');
-            $table->string('billing_celphone');
-            $table->string('billing_country');
-            $table->string('billing_state');
-            $table->string('billing_city');
-            $table->string('billing_zipcode');
-            
+                        
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });

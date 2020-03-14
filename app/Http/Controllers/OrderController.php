@@ -52,7 +52,7 @@ class OrderController extends Controller
         $count = \Cart::session(auth()->id())->getContent()->count();
         if ($count > 0) {
 
-            $order->order_number = uniqid('OrderNumber-');
+        $order->order_number = uniqid('OrderNumber-');
 
         $order->grand_total = \Cart::session(auth()->id())->getTotal();
 
@@ -67,29 +67,6 @@ class OrderController extends Controller
         $order->shipping_state = $request->input('shipping_state');
         $order->shipping_city = $request->input('shipping_city');
         $order->shipping_zipcode = $request->input('shipping_zipcode');
-
-        if(!$request->has('billing_name'))
-        {
-            $order->billing_name = $request->input('shipping_name');
-            $order->billing_lastname = $request->input('shipping_lastname');
-            $order->billing_address = $request->input('shipping_address');
-            $order->billing_celphone = $request->input('shipping_celphone');
-            $order->billing_country = $request->input('shipping_country');
-            $order->billing_state = $request->input('shipping_state');
-            $order->billing_city = $request->input('shipping_city');
-            $order->billing_zipcode = $request->input('shipping_zipcode');
-        }
-        else
-        {
-            $order->billing_name = $request->input('billing_name');
-            $order->billing_lastname = $request->input('billing_lastname');
-            $order->billing_address = $request->input('billing_address');
-            $order->billing_celphone = $request->input('billing_celphone');
-            $order->billing_country = $request->input('billing_country');
-            $order->billing_state = $request->input('billing_state');
-            $order->billing_city = $request->input('billing_city');
-            $order->billing_zipcode = $request->input('billing_zipcode');
-        }
 
         $order->save();
 
