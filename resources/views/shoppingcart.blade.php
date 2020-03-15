@@ -2,7 +2,19 @@
 
 @section('content')
 
-    
+   @if($errors->any())
+   <div class="alert alert-danger alert-dismissible fade in show" role="alert">
+   <strong>Faltante de Stock</strong> <br><br>
+   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+   <span aria-hidden="true">&times;</span>
+   </button>
+   <ul>
+      <h4>{{$errors->first()}}</h4>
+   </ul>
+</div>
+
+@endif
+
     <div class="table-table">
                 <div>
                     <div class="header">

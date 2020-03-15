@@ -67,7 +67,7 @@ class CartController extends Controller
     	return back();
 
     	}else{
-    		return "no hay tantos productos";
+    		return back()->withErrors('Revise cantidad seleccionada del producto: '. $items->name);
     	}
     	
 
