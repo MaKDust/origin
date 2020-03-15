@@ -51,9 +51,7 @@ class CartController extends Controller
 
     {
     	$cartItems = \Cart::session(auth()->id())->getContent();
-    	foreach ($cartItems as $items){
-    		$id = $items->id;
-    	}
+    	foreach ($cartItems as $items){$id = $items->id;}
     	$id = $items->id;
     	$products = Products::findOrFail($id);
     	$stock = $products->stock;
@@ -69,7 +67,7 @@ class CartController extends Controller
     	return back();
 
     	}else{
-    		echo "no hay tantos productos";
+    		return "no hay tantos productos";
     	}
     	
 
