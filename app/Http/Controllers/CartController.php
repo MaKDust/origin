@@ -12,7 +12,7 @@ class CartController extends Controller
 
     {
      	$products = Products::findOrFail($id);
-     	if ($products->stock > 1){
+     	if ($products->stock >= 1){
 		\Cart::session(auth()->id())->add(
 			array(
 			    'id' => $products->id,

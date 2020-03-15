@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Products;
 use App\Order;
 use Illuminate\Http\Request;
 
@@ -74,6 +75,8 @@ class OrderController extends Controller
         foreach ($cartItems as $item) 
         {
             $order->items()->attach($item->id, ['price'=>$item->price,'quantity'=>$item->quantity]);
+            $id = $item->id;
+            Products::whereId($id)->decrement('stock', $item['quantity']);
         }
         
         //shoppingCar empy
