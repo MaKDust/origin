@@ -90,7 +90,7 @@ class OrderController extends Controller
         // if ('payment') {
         //     $order  = Order::find($order_id);
         //     $order->is_paid = 1;
-        //      $order->status = success;
+        //     $order->status = success;
         //     $order->save();
         
 

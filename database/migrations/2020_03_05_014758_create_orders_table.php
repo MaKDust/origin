@@ -19,16 +19,8 @@ class CreateOrdersTable extends Migration
 
             $table->string('order_number');
             $table->unsignedBigInteger('user_id');
-            $table->enum('status', ['pending','processing','completed','decline'])->default('pending');
             $table->float('grand_total');
             $table->integer('item_count');
-            $table->boolean('is_paid')->default(false);
-            $table->enum('payment_method', [
-                'cash_on_delivery', 
-                'paypal','stripe',
-                'card'
-            ])->default('cash_on_delivery');
-
             $table->string('shipping_name');
             $table->string('shipping_lastname');
             $table->string('shipping_address');    
@@ -36,8 +28,7 @@ class CreateOrdersTable extends Migration
             $table->string('shipping_country');
             $table->string('shipping_state');
             $table->string('shipping_city');
-            $table->string('shipping_zipcode');
-                        
+            $table->string('shipping_zipcode');                        
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
