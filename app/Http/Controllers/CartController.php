@@ -47,10 +47,19 @@ class CartController extends Controller
     	return back();
     }
 
-    public function updateQuantity($rowId)
+    public function updateQuantity($rowId)//controlar cantidad si existe en stock
 
     {
-    	\Cart::session(auth()->id())->update($rowId, [
+    	$cartItems = \Cart::session(auth()->id())->getContent();
+    	foreach ($cartItems as $items){
+    		$id = $items->id;
+    	}
+    	$id = $items->id;
+    	$products = Products::findOrFail($id);
+    	$stock = $products->stock;
+    	$quantity = request('quantity');
+    	if( $stock >= $quantity ){
+    		\Cart::session(auth()->id())->update($rowId, [
     		'quantity' =>	[
     			'relative'	=> false,
     			'value'		=> request('quantity')
@@ -58,6 +67,14 @@ class CartController extends Controller
     	]);
 
     	return back();
+
+    	}else{
+    		echo "no hay tantos productos";
+    	}
+    	
+
+
+    	
     }
 
     public function checkout()

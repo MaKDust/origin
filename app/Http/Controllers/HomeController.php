@@ -14,10 +14,7 @@ class HomeController extends Controller
         return view('welcome', compact('products'));
     }
 
-    public function search(Request $request){
-
-        return view('search-results');
-    }
+    
     public function Product($id){   
     
         $products = Products::findOrFail($id);
