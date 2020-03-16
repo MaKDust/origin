@@ -21,7 +21,7 @@
             <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                <div class="container" style="width: 100%;">
                   <a class="navbar-brand" href="{{ url('/') }}">
-                  LOGO
+                  E-COM
                   </a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                   <span class="navbar-toggler-icon"></span>
@@ -73,7 +73,7 @@
                            </a>
                         </li>
                         @if ((Auth::user() != null) && (Auth::user()->role == "1"))
-                        <li style="margin:8px;font-size: 1rem"><a href="{{url('/dashboard')}}"><i class="fas fa-cogs"></i></a></li>
+                        <li style="margin:8px;font-size: 1rem"><a href="{{url('/dashboard')}}"><i class="fas fa-cogs"> Admin</i></a></li>
                         @endif
                         @endguest
                      </ul>

@@ -1,6 +1,6 @@
 <?php
 namespace App\Http\Controllers;
-
+use App\Order;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -44,10 +44,11 @@ class AdminController extends Controller
         }
     }
 
-    public function metrics() 
+    public function sales() 
     {
         if (Auth::user()->role == 1) {
-            return view('metrics');
+            $orders = Order::latest()->Paginate(6);
+            return view('metrics', compact('orders'));
         } else {
             return redirect('/');
         }

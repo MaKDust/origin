@@ -4561,7 +4561,9 @@ input[type=submit].btn-block {
 	display: flex;
 	padding-left: 0;
 	list-style: none;
-	border-radius: .25rem
+	border-radius: .25rem;
+	align-items: center;
+	justify-content: center;
 }
 
 .page-link {
@@ -9203,3 +9205,117 @@ html {
 
   
 }
+html body div.wrapper div#app nav.navbar.navbar-expand-md.navbar-light.bg-white.shadow-sm div.container div#navbarSupportedContent.navbar-collapse.collapse.show ul.navbar-nav.ml-auto li a{
+	display:inline-block;
+    margin:0px auto 0px auto;
+}
+
+
+/*ventas*/
+
+
+.tab .tdv, .thv {
+  color: black;
+  padding: 10px;
+}
+.tab .tdv {
+  text-align: center;
+  vertical-align: middle;
+}
+.tab .tdv:last-child {
+  font-size: 0.95em;
+  line-height: 1.4;
+  text-align: left;
+}
+.tab .thv {
+  background-color: #daeff1;
+  font-weight: 300;
+}
+.tab .trv:nth-child(2n) {
+  background-color: white;
+}
+.tab .trv:nth-child(2n+1) {
+  background-color: #edf7f8;
+}
+
+@media screen and (max-width: 700px) {
+  .tab, .trv, .tdv {
+    display: inline-block;
+  }
+
+  .tdv:first-child {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 100px;
+  }
+  .tdv:not(:first-child) {
+    clear: both;
+    margin-left: 100px;
+    padding: 4px 20px 4px 90px;
+    position: relative;
+    text-align: left;
+  }
+  .tdv:not(:first-child):before {
+    color: black;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+  }
+  .tdv:nth-child(2):before {
+    content: 'precio:';
+  }
+  .tdv:nth-child(3):before {
+    content: 'cantidad:';
+  }
+  .tdv:nth-child(4):before {
+    content: 'Acciones:';
+  }
+ 
+ 
+
+  .trv {
+    padding: 10px 0;
+    position: relative;
+  }
+  .trv:first-child {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  
+
+  .tdv:first-child {
+    background-color: #c8e7ea;
+    border-bottom: 1px solid #91ced4;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    top: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    width: 100%;
+  }
+  .tdv:not(:first-child) {
+    margin: 0;
+    padding: 5px 1em;
+    width: 100%;
+  }
+  .tdv:not(:first-child):before {
+    font-size: .8em;
+    padding-top: 0.3em;
+    position: relative;
+  }
+  .tdv:last-child {
+    padding-bottom: 1rem !important;
+  }
+
+  .trv {
+    background-color: white !important;
+    border: 1px solid #6cbec6;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    margin: 0.5rem 0;
+    padding: 0;
+  }
