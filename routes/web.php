@@ -26,11 +26,7 @@ Route::get('/addToCart/{id}', 'CartController@add')->name('addToCart')->middlewa
 Route::get('/destroyItem/{id}', 'CartController@destroyItem')->name('destroyItem')->middleware('auth');
 Route::get('/updateQuantity/{id}', 'CartController@updateQuantity')->name('updateQuantity')->middleware('auth');
 Route::get('/checkout', 'HomeController@checkout')->name('checkout')->middleware('auth'); 
-
 Route::get('/storeOrder', 'OrderController@storeOrder')->name('storeOrder')->middleware('auth');
-//Route::resource('orders', 'OrderController')->middleware('auth'); 
-
-
 
 /*
 |--------------------------------------------------------------------------

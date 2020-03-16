@@ -8,32 +8,7 @@ use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     public function storeOrder(Request $request)
     {   
         
@@ -79,24 +54,12 @@ class OrderController extends Controller
             Products::whereId($id)->decrement('stock', $item['quantity']);
         }
         
-        //shoppingCar empy
+        
         \Cart::session(auth()->id())->clear();
 
-        //dd('orden creada',$order);
-        return "orden completa, valla a pagar a /payment PAGINA PAGAR";
-
-        //paiment ('/payment', PaymentController@payment);
-
-        // if ('payment') {
-        //     $order  = Order::find($order_id);
-        //     $order->is_paid = 1;
-        //     $order->status = success;
-        //     $order->save();
         
+        return redirect()->route('welcome')->with('message', 'Muchas Gracias por su compra, Sigue buscando lo que necesitas!');
 
-        //    \Cart::session(auth()->id())->clear();
-        //     return "gracias por su compra, envia mail de agradecimiento vuelve al home o lleva a su pagina de compras "MIS COMPRAS";
-        // }
         }
 
         else{
@@ -105,48 +68,5 @@ class OrderController extends Controller
         
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Order  $order
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Order $order)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Order  $order
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Order $order)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Order  $order
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Order $order)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Order  $order
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Order $order)
-    {
-        //
-    }
+    
 }

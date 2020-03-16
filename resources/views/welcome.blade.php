@@ -1,8 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-
-<!--    hero  =   products    -->
+@if($messaje = Session::get('message'))
+    <div class="alert alert-success alert-dismissible fade in show" role="alert">
+        <p>{{ $messaje }}</p>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+@endif
 
 <div class="album">
         <div class="container">
