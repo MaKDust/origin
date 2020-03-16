@@ -21,7 +21,7 @@
             <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                <div class="container" style="width: 100%;">
                   <a class="navbar-brand" href="{{ url('/') }}">
-                  E-COM
+                  <img style="max-width: 70px;" src="https://vignette.wikia.nocookie.net/mrrobot/images/8/87/ECorp.png/revision/latest?cb=20150602024409" alt="E-CORP">
                   </a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                   <span class="navbar-toggler-icon"></span>

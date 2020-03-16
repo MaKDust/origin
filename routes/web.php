@@ -27,3 +27,5 @@ Route::get('/showProduct/{id}','ProductsController@show')->name('showProduct');
 Route::get('/editProduct/{id}','ProductsController@edit')->name('editProduct');
 Route::get('/updateProduct/{id}','ProductsController@updateProduct')->name('updateProduct');
 Route::get('/destroyProduct/{id}','ProductsController@destroy')->name('destroyProduct');
+
+Route::get('/showOrder/{id}','OrderController@showOrder')->name('showOrder');

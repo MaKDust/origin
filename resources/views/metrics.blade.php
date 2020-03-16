@@ -19,17 +19,12 @@
          <tr class="trv">
             <th class="thv">Numero de ordern</th>
             <th class="thv">Id usuario</th>
-            <th class="thv">Productos</th>
-            
             <th class="thv">Total</th>
-
          </tr>
          @foreach($orders as $order)
          <tr class="trv">
-            <td class="tdv">{{$order->order_number}}</td>
-            <td class="tdv">{{$order->user_id}}</td>
-            <td class="tdv">{{$order->item_count}}</td>
-            
+            <td class="tdv"><a href="{{ route('showOrder', $order->id) }}">{{$order->order_number}}</a></td>
+            <td class="tdv"><a href="#">{{$order->user_id}}</a></td>
             <td class="tdv">$ {{$order->grand_total}}</td>
          </tr>
          @endforeach
