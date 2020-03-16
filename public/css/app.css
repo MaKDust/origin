@@ -9265,13 +9265,13 @@ html body div.wrapper div#app nav.navbar.navbar-expand-md.navbar-light.bg-white.
     position: absolute;
   }
   .tdv:nth-child(2):before {
-    content: 'precio:';
+    content: 'Id Usuario:';
   }
   .tdv:nth-child(3):before {
     content: 'cantidad:';
   }
   .tdv:nth-child(4):before {
-    content: 'Acciones:';
+    content: 'Total:';
   }
  
  
