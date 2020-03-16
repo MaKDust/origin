@@ -23,12 +23,10 @@ class CartController extends Controller
 			    'attributes' => array(),
 			    'associatedModel' => $products
 			)
-		);
-
-        //dd($products);
+		);        
 		return back();
 		}else
-		return "no hat stock";//QUE VA HA HACER?? O DIRECTAMENTE NO APARECE
+		return "no hat stock";
     }
 
     public function shoppingcart()
@@ -47,7 +45,7 @@ class CartController extends Controller
     	return back();
     }
 
-    public function updateQuantity($rowId)//controlar cantidad si existe en stock
+    public function updateQuantity($rowId)
 
     {
     	$cartItems = \Cart::session(auth()->id())->getContent();
@@ -68,10 +66,7 @@ class CartController extends Controller
 
     	}else{
     		return back()->withErrors('Revise cantidad seleccionada del producto: '. $items->name);
-    	}
-    	
-
-
+    	}    	
     	
     }
 

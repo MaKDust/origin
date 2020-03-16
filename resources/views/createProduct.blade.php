@@ -99,15 +99,14 @@
                         </div>
                         <hr class="my-1">
                      </div>
-                       <!-- Cierra el CARDBODY -->
-                      <div class="form-group">
+                     <div class="form-group">
                         <button type="submit" name="add" class="btn btn-lg btn-danger float-right">Crear Producto</button>
                         <a href="{{ route('crudproducts') }}" class="btn btn-lg btn-warning float-left">Volver</a>
                       </div>
                     </form>
             </section>
-         </div> <!-- Cierra CARD -->
-      </div>   <!-- Cierra DIV CLASS -->
+         </div> 
+      </div>   
    </div>
 </div>
 </div>
