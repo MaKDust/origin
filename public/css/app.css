@@ -9320,4 +9320,110 @@ html body div.wrapper div#app nav.navbar.navbar-expand-md.navbar-light.bg-white.
     padding: 0;
   }
 
+/*facturas*/
+
+
+.tab .tdi, .thi {
+  color: black;
+  padding: 10px;
+}
+.tab .tdi {
+  text-align: center;
+  vertical-align: middle;
+}
+.tab .tdi:last-child {
+  font-size: 0.95em;
+  line-height: 1.4;
+  text-align: left;
+}
+.tab .thi {
+  background-color: #daeff1;
+  font-weight: 300;
+}
+.tab .tri:nth-child(2n) {
+  background-color: white;
+}
+.tab .tri:nth-child(2n+1) {
+  background-color: #edf7f8;
+}
+
+@media screen and (max-width: 700px) {
+  .tab, .tri, .tdi {
+    display: inline-block;
+  }
+
+  .tdi:first-child {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 100px;
+  }
+  .tdi:not(:first-child) {
+    clear: both;
+    margin-left: 100px;
+    padding: 4px 20px 4px 90px;
+    position: relative;
+    text-align: left;
+  }
+  .tdi:not(:first-child):before {
+    color: black;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+  }
+  .tdi:nth-child(2):before {
+    content: 'Cantidad:';
+  }
+  .tdi:nth-child(3):before {
+    content: 'Precio Unitarios:';
+  }
+ 
+ 
+ 
+
+  .tri {
+    padding: 10px 0;
+    position: relative;
+  }
+  .tri:first-child {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  
+
+  .tdi:first-child {
+    background-color: #c8e7ea;
+    border-bottom: 1px solid #91ced4;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    top: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    width: 100%;
+  }
+  .tdi:not(:first-child) {
+    margin: 0;
+    padding: 5px 1em;
+    width: 100%;
+  }
+  .tdi:not(:first-child):before {
+    font-size: .8em;
+    padding-top: 0.3em;
+    position: relative;
+  }
+  .tdi:last-child {
+    padding-bottom: 1rem !important;
+  }
+
+  .tri {
+    background-color: white !important;
+    border: 1px solid #6cbec6;
+    border-radius: 10px;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+    margin: 0.5rem 0;
+    padding: 0;
+  }
 

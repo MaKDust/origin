@@ -21,7 +21,7 @@
             <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                <div class="container" style="width: 100%;">
                   <a class="navbar-brand" href="{{ url('/') }}">
-                  <img style="max-width: 70px;" src="https://vignette.wikia.nocookie.net/mrrobot/images/8/87/ECorp.png/revision/latest?cb=20150602024409" alt="E-CORP">
+                  <img style="max-width: 70px;" src="https://res.cloudinary.com/teepublic/image/private/s--xv3LBqHj--/t_Preview/b_rgb:fffffe,c_limit,f_jpg,h_630,q_90,w_630/v1461549475/production/designs/491862_1.jpg" alt="E-CORP">
                   </a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                   <span class="navbar-toggler-icon"></span>
@@ -73,7 +73,7 @@
                            </a>
                         </li>
                         @if ((Auth::user() != null) && (Auth::user()->role == "1"))
-                        <li style="margin:8px;font-size: 1rem"><a href="{{url('/dashboard')}}"><i class="fas fa-cogs"> Admin</i></a></li>
+                        <li style="margin:8px;"><a href="{{url('/dashboard')}}"><i class="fas fa-cogs" style="color:gray;"> Dashboard</i></a></li>
                         @endif
                         @endguest
                      </ul>
