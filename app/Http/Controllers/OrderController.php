@@ -69,9 +69,9 @@ class OrderController extends Controller
     }
 
     public function showOrder($id){
-        $orders = Order::findOrFail($id);        
-        $items = Order::with('items')->get();
-        dd($orders, $items);
+
+        $orders = Order::find($id);
+        return view('showOrder', compact('orders'));
             
     }
 }
