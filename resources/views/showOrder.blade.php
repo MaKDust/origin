@@ -27,7 +27,7 @@ Total: {{ $orders->grand_total }}
 <div class="table-table">
    <div>
       <div class="header"><i class="fas fa-file-invoice" style="margin-right: 10px;"></i>
-         Detalle de Facturas
+         Detalle de Factura
       </div>
    </div>
    <table class="tab" cellspacing="0">
