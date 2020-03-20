@@ -8825,7 +8825,7 @@ html {
   border-radius: 10px;
   box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
   max-width: calc(100% - 2em);
-  margin: 1em auto;
+  margin: 8em auto;
   overflow: hidden;
   width: 800px;
 }
@@ -9328,10 +9328,12 @@ html body div.wrapper div#app nav.navbar.navbar-expand-md.navbar-light.bg-white.
   padding: 10px;
 }
 .tab .tdi {
+
   text-align: center;
   vertical-align: middle;
 }
 .tab .tdi:last-child {
+
   font-size: 0.95em;
   line-height: 1.4;
   text-align: left;
@@ -9379,9 +9381,6 @@ html body div.wrapper div#app nav.navbar.navbar-expand-md.navbar-light.bg-white.
   .tdi:nth-child(3):before {
     content: 'Precio Unitarios:';
   }
- 
- 
- 
 
   .tri {
     padding: 10px 0;
@@ -9426,4 +9425,5 @@ html body div.wrapper div#app nav.navbar.navbar-expand-md.navbar-light.bg-white.
     margin: 0.5rem 0;
     padding: 0;
   }
+
 

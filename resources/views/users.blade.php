@@ -9,7 +9,7 @@
          </h2>
       </div>
       <div class="inside">
-         <table class="table">
+         <table class="table" >
             <thead>
                <tr>
                   <td><strong>Avatar</strong></td>

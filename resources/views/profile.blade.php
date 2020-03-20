@@ -3,7 +3,7 @@
 <div class="container">
    <div class="row justify-content-center">
       <div class="col-md-8">
-         <div class="card">
+         <div class="card" style="margin: 50px 0 50px 0;">
             <div class="card-header">Perfil usuario</div>
             <div class="card-body">
                @if (session('status'))

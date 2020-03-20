@@ -11,7 +11,7 @@
    </ul>
 </div>
 @endif
-<div class="table-table">
+<div class="table-table" >
    <div>
       <div class="header">
          <i class="fas fa-shopping-cart" style="margin-right: 10px;"></i>

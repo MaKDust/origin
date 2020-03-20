@@ -12,12 +12,12 @@
       <link rel="dns-prefetch" href="//fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
       <script src="https://kit.fontawesome.com/3b98d2cca3.js" crossorigin="anonymous"></script>
+      <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
       <!-- Styles -->
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
    </head>
    <body>
-      <div class="wrapper">
-         <div id="app">
+      
             <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                <div class="container" style="width: 100%;">
                   <a class="navbar-brand" href="{{ url('/') }}">
@@ -84,7 +84,71 @@
             <main class="">
                @yield('content')
             </main>
-         </div>
+        <hr>
+  <div class="container well">
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-7">
+        <div class="row">
+          <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
+            <div>
+              <ul class="list-unstyled">
+                <li> <a>Link anchor</a> </li>
+                <li> <a>Link anchor</a> </li>
+                <li> <a>Link anchor</a> </li>
+                <li> <a>Link anchor</a> </li>
+                <li> <a>Link anchor</a> </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4  col-xs-6">
+            <div>
+              <ul class="list-unstyled">
+                <li> <a>Link anchor</a> </li>
+                <li> <a>Link anchor</a> </li>
+                <li> <a>Link anchor</a> </li>
+                <li> <a>Link anchor</a> </li>
+                <li> <a>Link anchor</a> </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
+            <div>
+              <ul class="list-unstyled">
+                <li> <a>Link anchor</a> </li>
+                <li> <a>Link anchor</a> </li>
+                <li> <a>Link anchor</a> </li>
+                <li> <a>Link anchor</a> </li>
+                <li> <a>Link anchor</a> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-5"> 
+        <address>
+        <strong>MyStoreFront, Inc.</strong><br>
+        Indian Treasure Link<br>
+        Quitman, WA, 99110-0219<br>
+        <abbr title="Phone">P:</abbr> (123) 456-7890
+      </address>
+        <address>
+        <strong>Full Name</strong><br>
+        <a href="mailto:#">first.last@example.com</a>
+        </address>
+        </div>
+    </div>
+  </div>
+
+<footer class="text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <p>Copyright © E-Corp. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/jquery-1.11.2.min.js"></script> 
+<script src="js/bootstrap.min.js"></script>
    </body>
 </html>
