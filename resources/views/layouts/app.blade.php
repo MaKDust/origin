@@ -81,13 +81,16 @@
                </div>
             </nav>
             @yield('AdminNav')
-            <main class="">
+            <main>
                @yield('content')
             </main>
         <hr>
-  <div class="container well">
+ 
+
+<footer class="text-center">
+  <div class="container">
     <div class="row">
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-7">
+       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-7">
         <div class="row">
           <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
             <div>
@@ -136,15 +139,6 @@
         <a href="mailto:#">first.last@example.com</a>
         </address>
         </div>
-    </div>
-  </div>
-
-<footer class="text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <p>Copyright © E-Corp. All rights reserved.</p>
-      </div>
     </div>
   </div>
 </footer>
