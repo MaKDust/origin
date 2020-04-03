@@ -81,7 +81,7 @@
                </div>
             </nav>
             @yield('AdminNav')
-            <main class="">
+            <main>
                @yield('content')
             </main>
         <hr>
@@ -139,7 +139,5 @@
             </div>
           </div>
         </footer>
-<script src="js/jquery-1.11.2.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
    </body>
 </html>

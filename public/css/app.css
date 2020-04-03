@@ -57,7 +57,6 @@ figure,
 footer,
 header,
 hgroup,
-main,
 nav,
 section {
 	display: block
@@ -9427,3 +9426,24 @@ html body div.wrapper div#app nav.navbar.navbar-expand-md.navbar-light.bg-white.
   }
 
 
+main {
+	display: block;	
+	min-height: 100vh;
+	background: white;
+	position: relative;
+  	z-index: 1;
+
+}
+
+footer {
+  /* place on the bottom */
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background: #252a47;
+  display: grid;
+  
+  padding: 50px;
+}
