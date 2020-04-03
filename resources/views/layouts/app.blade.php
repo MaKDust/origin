@@ -17,7 +17,7 @@
       <link href="{{ asset('css/app.css') }}" rel="stylesheet">
    </head>
    <body>
-      
+
             <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
                <div class="container" style="width: 100%;">
                   <a class="navbar-brand" href="{{ url('/') }}">
@@ -64,10 +64,10 @@
                         </li>
                         <li>
                            <a href="{{url('/user')}}">
-                           <img 
-                              src="{{asset(Auth::user()->avatar)}}" 
-                              alt="" 
-                              class="img-responsive img-fluid img-thumbnail rounded mx-auto d-block" 
+                           <img
+                              src="{{asset(Auth::user()->avatar)}}"
+                              alt=""
+                              class="img-responsive img-fluid img-thumbnail rounded mx-auto d-block"
                               style="height:40px;width:40px;margin-left:15px;"
                               >
                            </a>
@@ -85,70 +85,61 @@
                @yield('content')
             </main>
         <hr>
-  <div class="container well">
-    <div class="row">
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-7">
-        <div class="row">
-          <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
-            <div>
-              <ul class="list-unstyled">
-                <li> <a>Link anchor</a> </li>
-                <li> <a>Link anchor</a> </li>
-                <li> <a>Link anchor</a> </li>
-                <li> <a>Link anchor</a> </li>
-                <li> <a>Link anchor</a> </li>
-              </ul>
+        <div class="container-fluid">
+          <div class="row">
+              <div class=" col-sm-6 col-md-3" style="">
+                <div>
+                  <ul class="list-unstyled">
+                  <strong>Información de la Tienda</strong>
+                  <p align="justify"><h6>
+                  Actualmente Nuestra Tienda se encuentra en una version DEMO
+                  proximamente estaremos Actualizando Nuestros Productos para
+                  que puedas realizar tu compra. Gracias por Visitarnos!</h6></p>
+                  </ul>
+                </div>
+              </div>
+              <div class=" col-sm-6 col-md-3" style="">
+                <div>
+                  <ul class="list-unstyled">
+                    <strong>Redes Sociales</strong>
+                    <li><i class="fab fa-facebook-square"></i><a href="http://www.facebook.com"> Facebook</a></li>
+                    <li><i class="fab fa-twitter-square"></i><a href="http://www.twitter.com"> Twitter</a></li>
+                    <li><i class="fab fa-instagram-square"></i><a href="http://www.instegram.com"> Instegram</a></li>
+                    <li><i class="fab fa-youtube"></i><a href="http://www.youtube.com"> YouTube</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class=" col-sm-6 col-md-3" style="">
+                <div>
+                  <ul class="list-unstyled">
+                    <strong>Consultas </strong>
+                    <li> <i class="fas fa-shopping-cart"></i><a href=""> Formas de Pago</a> </li>
+                    <li> <i class="fab fa-cc-mastercard"></i><a href=""> Tarjetas Habilitadas</a> </li>
+                    <li> <i class="fas fa-truck"></i><a href=""> Envíos</a> </li>
+                    <li> <i class="fas fa-tty"></i><a href=""> Sucursales</a> </li>
+                </ul>
+                </div>
+              </div>
+              <div class=" col-sm-6 col-md-3" style="">
+              <strong>BBR Tienda Virtual</strong><br>
+              Bustos Bustamante Reyes<br>
+              San Miguel de Tucuman<br>
+              Tel: (381)/456-7890<br>
+                <strong>E-mail</strong><br>
+                <a href="mailto:#">tienda.bbr@gmail.com</a>
             </div>
-          </div>
-          <div class="col-sm-4 col-md-4 col-lg-4  col-xs-6">
-            <div>
-              <ul class="list-unstyled">
-                <li> <a>Link anchor</a> </li>
-                <li> <a>Link anchor</a> </li>
-                <li> <a>Link anchor</a> </li>
-                <li> <a>Link anchor</a> </li>
-                <li> <a>Link anchor</a> </li>
-              </ul>
             </div>
-          </div>
-          <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
-            <div>
-              <ul class="list-unstyled">
-                <li> <a>Link anchor</a> </li>
-                <li> <a>Link anchor</a> </li>
-                <li> <a>Link anchor</a> </li>
-                <li> <a>Link anchor</a> </li>
-                <li> <a>Link anchor</a> </li>
-              </ul>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-5"> 
-        <address>
-        <strong>MyStoreFront, Inc.</strong><br>
-        Indian Treasure Link<br>
-        Quitman, WA, 99110-0219<br>
-        <abbr title="Phone">P:</abbr> (123) 456-7890
-      </address>
-        <address>
-        <strong>Full Name</strong><br>
-        <a href="mailto:#">first.last@example.com</a>
-        </address>
-        </div>
-    </div>
-  </div>
-
-<footer class="text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12">
-        <p>Copyright © E-Corp. All rights reserved.</p>
-      </div>
-    </div>
-  </div>
-</footer>
-<script src="js/jquery-1.11.2.min.js"></script> 
+        <footer class="text-center">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12">
+                <p>Copyright © E-Corp. All rights reserved.</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+<script src="js/jquery-1.11.2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
    </body>
 </html>
