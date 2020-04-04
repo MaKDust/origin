@@ -87,18 +87,17 @@
         <hr>
         <div class="container-fluid">
           <div class="row">
-              <div class=" col-sm-6 col-md-3" style="">
+              <div class=" col-sm-6 col-md-3">
                 <div>
                   <ul class="list-unstyled">
                   <strong>Información de la Tienda</strong>
                   <p align="justify"><h6>
-                  Actualmente Nuestra Tienda se encuentra en una version DEMO
-                  proximamente estaremos Actualizando Nuestros Productos para
-                  que puedas realizar tu compra. Gracias por Visitarnos!</h6></p>
+                  Actualmente Nuestra Tienda se encuentra en una version DEMO.
+                  </h6></p>
                   </ul>
                 </div>
               </div>
-              <div class=" col-sm-6 col-md-3" style="">
+              <div class=" col-sm-6 col-md-3">
                 <div>
                   <ul class="list-unstyled">
                     <strong>Redes Sociales</strong>
@@ -109,24 +108,23 @@
                   </ul>
                 </div>
               </div>
-              <div class=" col-sm-6 col-md-3" style="">
+              <div class=" col-sm-6 col-md-3">
                 <div>
                   <ul class="list-unstyled">
                     <strong>Consultas </strong>
-                    <li> <i class="fas fa-shopping-cart"></i><a href=""> Formas de Pago</a> </li>
-                    <li> <i class="fab fa-cc-mastercard"></i><a href=""> Tarjetas Habilitadas</a> </li>
-                    <li> <i class="fas fa-truck"></i><a href=""> Envíos</a> </li>
-                    <li> <i class="fas fa-tty"></i><a href=""> Sucursales</a> </li>
+                    <li> <i class="fas fa-shopping-cart"></i><a href="#"> Formas de Pago</a> </li>
+                    <li> <i class="fab fa-cc-mastercard"></i><a href="#"> Tarjetas Habilitadas</a> </li>
+                    <li> <i class="fas fa-truck"></i><a href="#"> Envíos</a> </li>
+                    <li> <i class="fas fa-tty"></i><a href="#"> Sucursales</a> </li>
                 </ul>
                 </div>
               </div>
-              <div class=" col-sm-6 col-md-3" style="">
-              <strong>BBR Tienda Virtual</strong><br>
+              <div class="col-sm-6 col-md-3">
+              <strong>E CORP</strong><br>
               Bustos Bustamante Reyes<br>
               San Miguel de Tucuman<br>
-              Tel: (381)/456-7890<br>
-                <strong>E-mail</strong><br>
-                <a href="mailto:#">tienda.bbr@gmail.com</a>
+              <strong>E-mail</strong><br>
+                <a href="mailto:contactositio2020@gmail.com">contactositio2020@gmail.com</a>
             </div>
             </div>
         </div>

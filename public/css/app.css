@@ -222,7 +222,8 @@ img {
 
 img,
 svg {
-	vertical-align: middle
+	vertical-align: middle;
+	width: 100%;
 }
 
 svg {
@@ -9434,16 +9435,7 @@ main {
   	z-index: 1;
 
 }
-
-footer {
-  /* place on the bottom */
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-
-  background: #252a47;
-  display: grid;
-  
-  padding: 50px;
+html body main div#demo.carousel.slide div.carousel-inner div.carousel-item.active img, svg{
+	height: 100%;
 }
+
