@@ -3180,7 +3180,7 @@ input[type=submit].btn-block {
 .btn-group .btn+.btn-group,
 .btn-group .btn-group+.btn,
 .btn-group .btn-group+.btn-group {
-	margin-left: -1px
+	
 }
 
 .btn-toolbar {
@@ -8780,6 +8780,38 @@ a.text-dark:hover {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, .04)
 }
 
+
+html body main div.container div.row div.col-lg-4.col-md-4.col-sm-4.col-xs-4.text-center i {
+	font-size: 30px;
+	margin: 10px 0 10px 0;
+	
+}
+
+
+
+.labels {
+
+  position: absolute;
+  width: 30%;
+  opacity: 0.9;
+}
+.labels > div {
+  width: 100%;
+  position: absolute;
+
+}
+.labels > div.label-new {
+ top:100px;
+
+ 
+}
+.labels > div.label-sale {
+ top: 60px;
+ 
+}
+
+
+
 body {
 	background-color: #f5f6fa;
 	font-size: 14px;
@@ -9426,6 +9458,7 @@ html body div.wrapper div#app nav.navbar.navbar-expand-md.navbar-light.bg-white.
     padding: 0;
   }
 
+}
 
 main {
 	display: block;	
@@ -9438,4 +9471,5 @@ main {
 html body main div#demo.carousel.slide div.carousel-inner div.carousel-item.active img, svg{
 	height: 100%;
 }
+
 

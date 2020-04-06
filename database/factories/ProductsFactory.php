@@ -13,5 +13,7 @@ $factory->define(Products::class, function (Faker $faker) {
        'stock' => $faker->numberBetween(1,50),
        'price' => $faker->numberBetween(100,200),
        'avatar' => $faker->image('public/img',640,480,null,false),
+       'new' => $faker->boolean($chanceOfGettingTrue = 50),
+       'sale'=> $faker->boolean($chanceOfGettingTrue = 50),
     ];
 });

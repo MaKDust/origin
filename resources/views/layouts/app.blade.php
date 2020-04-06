@@ -112,10 +112,10 @@
                 <div>
                   <ul class="list-unstyled">
                     <strong>Consultas </strong>
-                    <li> <i class="fas fa-shopping-cart"></i><a href="#"> Formas de Pago</a> </li>
-                    <li> <i class="fab fa-cc-mastercard"></i><a href="#"> Tarjetas Habilitadas</a> </li>
-                    <li> <i class="fas fa-truck"></i><a href="#"> Envíos</a> </li>
-                    <li> <i class="fas fa-tty"></i><a href="#"> Sucursales</a> </li>
+                    <li> <i class="fas fa-shopping-cart"></i><a href=""> Formas de Pago</a> </li>
+                    <li> <i class="fab fa-cc-mastercard"></i><a href=""> Tarjetas Habilitadas</a> </li>
+                    <li> <i class="fas fa-truck"></i><a href=""> Envíos</a> </li>
+                    <li> <i class="fas fa-tty"></i><a href=""> Sucursales</a> </li>
                 </ul>
                 </div>
               </div>

@@ -18,6 +18,15 @@
                      <div class="card shadow">
                         <h4 class="text-center" style=" margin-top: 5px;">{{ $products->name }}</h4>
                         <div class="card shadow" >
+                        <div class="labels">
+                           @if($products->new == 1)
+                          <div class="label-new bg-success text-white text-center py-1" style="width: 292px">Nuevo</div>
+                          @endif
+                           @if($products->sale == 1)
+                          <div class="label-sale bg-primary text-white text-center py-1" style="width: 292px">Oferta</div>
+                          @endif
+                        </div>
+
                            <img class="img-fluid img-thumbnail rounded mx-auto d-block" src="/img/{{($products->avatar)}}" style="height: 300px;width: 300px;">
                         </div>
                      </div>
