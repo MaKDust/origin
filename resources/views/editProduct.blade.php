@@ -50,7 +50,7 @@
                                  <div class="row">
                                     <div class="form-group col-lg-6">
                                        <label for="name" class=""><strong>{{ __('Nombre') }}</strong>:<br>{{ ($products->name) }}</label>
-                                       <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="Nombre" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                       <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ ($products->name) }}" required autocomplete="name" autofocus>
                                        @error('name')
                                        <span class="invalid-feedback" role="alert">
                                        <strong>{{ $message }}</strong>
@@ -59,7 +59,7 @@
                                     </div>
                                     <div class="form-group col-lg-8">
                                        <label for="features" class=""><strong>{{ __('Caracteristicas') }}</strong>:<br>{{ ($products->features) }}</label>
-                                       <input id="features" type="text" class="form-control @error('features') is-invalid @enderror" name="features" placeholder="Caracteristicas"value="{{ old('features') }}" required autocomplete="features" autofocus>
+                                       <input id="features" type="text" class="form-control @error('features') is-invalid @enderror" name="features" value="{{ ($products->features) }}" required autocomplete="features" autofocus>
                                        @error('features')
                                        <span class="invalid-feedback" role="alert">
                                        <strong>{{ $message }}</strong>
@@ -70,7 +70,7 @@
                                  <div class="row">
                                     <div class="form-group col-lg-12">
                                        <label for="description" class=""><strong>{{ __('Descripción') }}</strong>:<br>{{ ($products->description) }}</label>
-                                       <input id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" placeholder="Descripción" value="{{ old('description') }}" required autocomplete="description" autofocus>
+                                       <input id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ ($products->description) }}" required autocomplete="description" autofocus>
                                        @error('description')
                                        <span class="invalid-feedback" role="alert">
                                        <strong>{{ $message }}</strong>
@@ -81,7 +81,7 @@
                                  <div class="row">
                                     <div class="form-group col-lg-5">
                                        <label for="stock" class=""><strong>{{ __('Stock') }}</strong>:<br>{{ ($products->stock) }}</label>
-                                       <input id="stock" type="number" class="form-control @error('stock') is-invalid @enderror" name="stock" placeholder="Stock" value="{{ old('stock') }}" required autocomplete="stock" autofocus>
+                                       <input id="stock" type="number" class="form-control @error('stock') is-invalid @enderror" name="stock" value="{{ ($products->stock) }}" required autocomplete="stock" autofocus>
                                        @error('stock')
                                        <span class="invalid-feedback" role="alert">
                                        <strong>{{ $message }}</strong>
@@ -90,7 +90,7 @@
                                     </div>
                                     <div class="form-group col-lg-5">
                                        <label for="price" class=""><strong>{{ __('Precio') }}</strong>:<br>{{ ($products->price) }}</label>
-                                       <input id="price" type="number" class="form-control @error('price') is-invalid @enderror" name="price" placeholder="Precio" value="{{ old('price') }}" required autocomplete="price" autofocus>
+                                       <input id="price" type="number" class="form-control @error('price') is-invalid @enderror" name="price" value="{{ ($products->price) }}" required autocomplete="price" autofocus>
                                        @error('price')
                                        <span class="invalid-feedback" role="alert">
                                        <strong>{{ $message }}</strong>
