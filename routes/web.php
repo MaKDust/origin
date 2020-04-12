@@ -8,7 +8,7 @@ Route::get('/Product/{id}', 'HomeController@Product')->name('Product');
 Auth::routes();
 
 Route::get('/user', 'HomeController@userProfile')->name('user')->middleware('auth');
-Route::post('/user/{id}','HomeController@edit')->name('user')->name('user');
+Route::post('/user/{id}','HomeController@edit')->name('user');
 
 Route::get('/shoppingcart', 'CartController@shoppingcart')->name('shoppingcart')->middleware('auth');
 Route::get('/addToCart/{id}', 'CartController@add')->name('addToCart')->middleware('auth');
