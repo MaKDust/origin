@@ -1,17 +1,20 @@
 <?php
 Route::redirect('/','/welcome');
-Route::get('/welcome', 'HomeController@index')->name('welcome'); 
-Route::get('/product', 'GuestController@product')->name('product'); 
+Route::get('/welcome', 'HomeController@index')->name('welcome');
+Route::get('/product', 'GuestController@product')->name('product');
 Route::get('/contact', 'GuestController@contact')->name('contact');
-Route::get('/search', 'HomeController@search')->name('search');	
-Route::get('/Product/{id}', 'HomeController@Product')->name('Product');	
+Route::get('/search', 'HomeController@search')->name('search');
+Route::get('/Product/{id}', 'HomeController@Product')->name('Product');
 Auth::routes();
+
 Route::get('/user', 'HomeController@userProfile')->name('user')->middleware('auth');
-Route::get('/shoppingcart', 'CartController@shoppingcart')->name('shoppingcart')->middleware('auth'); 
+Route::post('/editar','PerfilController@editar')->name('editar');
+
+Route::get('/shoppingcart', 'CartController@shoppingcart')->name('shoppingcart')->middleware('auth');
 Route::get('/addToCart/{id}', 'CartController@add')->name('addToCart')->middleware('auth');
 Route::get('/destroyItem/{id}', 'CartController@destroyItem')->name('destroyItem')->middleware('auth');
 Route::get('/updateQuantity/{id}', 'CartController@updateQuantity')->name('updateQuantity')->middleware('auth');
-Route::get('/checkout', 'HomeController@checkout')->name('checkout')->middleware('auth'); 
+Route::get('/checkout', 'HomeController@checkout')->name('checkout')->middleware('auth');
 Route::get('/storeOrder', 'OrderController@storeOrder')->name('storeOrder')->middleware('auth');
 Route::get('/dashboard','AdminController@index')->name('dashboard');
 Route::get('/sales', 'AdminController@sales')->name('sales');

@@ -35,42 +35,62 @@
                                  </div>
                               </div>
                            </div>
-                           <div class="card-body" >
+
+                            <div class="card-body" >
                               <h6 class="heading-small text-muted mb-4">Datos personales</h6>
                               <div class="pl-lg-4">
                                  <div class="row">
-                                    <div class="col-lg-6">
-                                       <strong>Nombre</strong><br> 
+                                    <div class="col-lg-8">
+                                       <strong>Nombre</strong><br>
                                        {{ Auth::user()->name }}
                                     </div>
-                                    <div class="col-lg-6">
-                                       <strong>Apellico</strong><br> 
+                                    <div class="col-lg-4">
+                                       <strong>Apellido</strong><br>
                                        {{ Auth::user()->lastname }}
                                     </div>
                                  </div>
                                  <div class="row">
-                                    <div class="col-lg-6">
-                                       <strong>Email</strong><br> 
+                                    <div class="col-lg-8">
+                                       <strong>Email</strong><br>
                                        {{ Auth::user()->email }}
                                     </div>
+                                    <div class="col-lg-4">
+                                       <strong>N Registro</strong><br>
+                                       {{ Auth::user()->id }}
+                                    </div>
                                  </div>
+                               </div>
                                  <hr class="my-4">
-                                 <!-- Direccion -->
-                                 <a href="#!" class="btn btn-outline-info float-right">Modificar</a>
                                  <h6 class="heading-small text-muted mb-4">Informacion de contacto</h6>
+                                 <form method="POST" action="{{ route('user', Auth::user()->id) }}" enctype="multipart/form-data">
+                                  {{csrf_field()}}
                                  <div class="row">
-                                    <div class="col-md-3">
-                                       <strong>Direccion</strong><br> 
+                                   <div class="form-group col-lg-6">
+                                      <label for="celphone" class=""><strong>Telefono</strong></label>
+                                      <input type="text" class="form-control" name="celphone" placeholder="{{ Auth::user()->celphone }}" value="" required autocomplete="name" autofocus>
+                                   </div>
+                                   <div class="form-group col-lg-6">
+                                      <label for="address" class=""><strong>Domicilio</strong></label>
+                                      <input type="text" class="form-control" name="address" placeholder="{{ Auth::user()->address }}" value="" required autocomplete="name" autofocus>
+                                   </div>
+                                    <div class="form-group col-lg-6"><!-- -->
+                                       <label for="city" class=""><strong>Ciudad</strong></label>
+                                       <input type="text" class="form-control" name="city" placeholder="{{ Auth::user()->city }}" value="" required autocomplete="name" autofocus>
                                     </div>
-                                    <div class="col-md-3">
-                                       <strong>Ciudad</strong><br>
+                                    <div class="form-group col-lg-6">
+                                       <label for="state" class=""><strong>Provincia</strong></label>
+                                       <input type="text" class="form-control" name="state" placeholder="{{ Auth::user()->state }}" value="" required autocomplete="name" autofocus>
                                     </div>
-                                    <div class="col-md-3">
-                                       <strong>Pais</strong><br>
-                                    </div>
-                                    <div class="col-md-3">
-                                       <strong>Pais</strong><br>
-                                    </div>
+                                     <div class="form-group col-lg-6"><!-- -->
+                                        <label for="zipcode" class=""><strong>Código Postal</strong></label>
+                                        <input type="text" class="form-control" name="zipcode" placeholder="{{ Auth::user()->zipcode }}" value="" required autocomplete="name" autofocus>
+                                     </div>
+                                     <div class="form-group col-lg-6"><!-- -->
+                                        <label for="country" class=""><strong>Pais</strong></label>
+                                        <input type="text" class="form-control" name="country" placeholder="{{ Auth::user()->country }}" value="" required autocomplete="name" autofocus>
+                                     </div>
+                                     <input type="hidden" name="id" class="btn btn-outline-info float-right" value="{{ Auth::user()->id }}">
+                                     <input type="submit" name="id" class="btn btn-outline-info float-right" value="Modificar">
                                  </div>
                               </div>
                            </div>
@@ -80,8 +100,8 @@
                   </div>
                </section>
             </div>
-         </div>
-      </div>
+            </div>
+          </div>
    </div>
 </div>
 @endsection

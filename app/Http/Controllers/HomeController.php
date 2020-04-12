@@ -14,9 +14,9 @@ class HomeController extends Controller
         return view('welcome', compact('products'));
     }
 
-    
-    public function Product($id){   
-    
+
+    public function Product($id){
+
         $products = Products::findOrFail($id);
         return view('product', compact('products'));
     }
@@ -39,6 +39,22 @@ class HomeController extends Controller
     {
         return view('profile');
     }
+    public function edit(Request $formulario, $id)
+    {
+      $user=User::find($id);
+
+      $user->celphone=$formulario["celphone"];
+      $user->address= $formulario["address"]; //Direccion
+      $user->city= $formulario["city"];     //Ciudad
+      $user->state= $formulario["state"];  // Provincia
+      $user->zipcode= $formulario["zipcode"];  // Cod Postal
+      $user->country= $formulario["country"];
+
+      $user->update();
+
+      return redirect('user');
+
+    }
 
     public function shoppingcart()
     {
@@ -50,5 +66,5 @@ class HomeController extends Controller
         return view('checkout');
     }
 
-   
+
 }
