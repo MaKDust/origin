@@ -32,8 +32,7 @@ class ProductsController extends Controller
             'features'      =>  'required',
             'description'   =>  'required',
             'stock'         =>  'required|min:1',
-            'price'         =>  'required',
-            
+            'price'         =>  'required',            
             'avatar'        =>  'required'
         ]);
 
@@ -47,8 +46,7 @@ class ProductsController extends Controller
             'features'      =>  $request->features,
             'description'   =>  $request->description,
             'stock'         =>  $request->stock,
-            'price'         =>  $request->price,
-            
+            'price'         =>  $request->price,            
             'avatar'        =>  $avatarname
         );
 
@@ -103,7 +101,8 @@ class ProductsController extends Controller
             'description'   =>  $request->description,
             'stock'         =>  $request->stock,
             'price'         =>  $request->price,
-            
+            'new'           =>  $request->new,
+            'sale'          =>  $request->sale,            
             'avatar'        =>  $avatarname
             );
 
@@ -115,21 +114,18 @@ class ProductsController extends Controller
             'features'      =>  'required',
             'description'   =>  'required',
             'stock'         =>  'required|min:1',
-            'price'         =>  'required',
-            
-            
-            ]);
+            'price'         =>  'required'
+        ]);
    
-
             $products = array(
             'name'          =>  $request->name,
             'features'      =>  $request->features,
             'description'   =>  $request->description,
             'stock'         =>  $request->stock,
             'price'         =>  $request->price,
-            
-            
-            );
+            'new'           =>  $request->new,
+            'sale'          =>  $request->sale
+        );
 
             Products::whereId($id)->update($products);
             return redirect()->route('crudproducts')->with('success', 'Producto actualizado!');

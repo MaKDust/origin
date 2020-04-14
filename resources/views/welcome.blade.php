@@ -66,26 +66,19 @@
    <div class="container">
       <div class="row" >
          @foreach ($products as $product)
+        
          <div class="col-lg-3 d-flex py-3 justify-content-center">
             <div class="card mb-3 box-shadow" style="box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .15);">
                <div class="card-header bg-transparent align-items-center" style="height: 55%;border:none;">
-               
-                
-
-
-
-                  <div class="labels">
-                     @if($product->new == 1)
+                <div class="labels">
+                  @if($product->new == 1)
                     <div class="label-new bg-success text-white text-center py-1">Nuevo</div>
-                    @endif
-                     @if($product->sale == 1)
+                  @endif
+                  @if($product->sale == 1)
                     <div class="label-sale bg-primary text-white text-center py-1">Oferta</div>
-                    @endif
-                  </div>
-
-
-
-                  <a href="{{ route('Product', $product->id ) }}"><img class="card-img-top img-fluid rounded mx-auto d-block" src="img/{{ $product->avatar }}" alt="Card image cap" style="width: 80%; "></a>    
+                  @endif
+                </div>
+                <a href="{{ route('Product', $product->id ) }}"><img class="card-img-top img-fluid rounded mx-auto d-block" src="img/{{ $product->avatar }}" alt="Card image cap" style="width: 80%; "></a>    
                </div>
                <div class="card-body">
                   <h5 class="card-title">{{ ($product->name) }}</h5>
@@ -105,6 +98,7 @@
                </div>
             </div>
          </div>
+        
          @endforeach
       </div>
    </div>

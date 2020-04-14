@@ -10,7 +10,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $products = Products::latest()->Paginate(8);
+        $products = Products::oldest()->Paginate(8);
 
         return view('welcome', compact('products'));
     }

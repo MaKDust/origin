@@ -21,6 +21,8 @@ class CreateProductsTable extends Migration
             $table->integer('stock');
             $table->float('price');
             $table->integer('quantity')->default(0);
+            $table->boolean('new')->nullable()->default(false);
+            $table->boolean('sale')->nullable()->default(false);
             $table->string('avatar');
             $table->timestamps();
         });
