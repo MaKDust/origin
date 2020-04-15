@@ -24,7 +24,7 @@
          @foreach($orders as $order)
          <tr class="trv">
             <td class="tdv"><a href="{{ route('showOrder', $order->id) }}">{{$order->order_number}}</a></td>
-            <td class="tdv"><a href="#">{{$order->user_id}}</a></td>
+            <td class="tdv"><a href="{{ route('show', $order->user_id) }}">{{$order->user_id}}</a></td>
             <td class="tdv">$ {{$order->grand_total}}</td>
          </tr>
          @endforeach
