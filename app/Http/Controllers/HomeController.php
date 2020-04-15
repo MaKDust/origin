@@ -40,23 +40,7 @@ class HomeController extends Controller
     {
         return view('profile');
     }
-    public function edit(Request $formulario, $id)
-    {
-      $user=User::find($id);
-
-      $user->celphone=$formulario["celphone"];
-      $user->address= $formulario["address"]; //Direccion
-      $user->city= $formulario["city"];     //Ciudad
-      $user->state= $formulario["state"];  // Provincia
-      $user->zipcode= $formulario["zipcode"];  // Cod Postal
-      $user->country= $formulario["country"];
-
-      $user->update();
-
-      return redirect('user');
-
-    }
-
+    
     public function shoppingcart()
     {
         return view('shoppingcart');

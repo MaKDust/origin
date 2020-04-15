@@ -1,6 +1,19 @@
 @extends('dashboard')
 @section('content')
 <div class="container">
+  @if($errors->any())
+  <div class="alert alert-danger alert-dismissible fade in show" role="alert">
+     <strong>Dato ingresado invalido</strong> <br><br>
+     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+     <span aria-hidden="true">&times;</span>
+     </button>
+     <ul>
+        @foreach($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+     </ul>
+  </div>
+  @endif
    <div class="row justify-content-center">
       <div class="col-md-8">
          <div class="card">
@@ -11,11 +24,13 @@
                </div>
                @endif
                <section class="container-fluid perfil">
-                 <form method="POST" action="" enctype="multipart/form-data">
+                 <form method="POST" action="{{ route('updateUser', $usuario->id) }}" enctype="multipart/form-data">
+                   @csrf
+                   @method('GET')
                   <div class="row">
                      <div class="col-md-3">
                         <div class="card shadow">
-                           <h4 class="text-center" style=" margin-top: 5px;">{{ $usuario->username }}</h4>
+                           <h4 class="text-center" style=" margin-top: 5px;">{{ $usuario->name }}</h4>
                            <div class="card shadow" >
                               <img class="img-fluid img-thumbnail rounded mx-auto d-block" src="/img/{{($usuario->avatar)}}" style="height: 100px;width: 100px;">
                               <input type="file" name="avatar" id="avatar" class="form-control" style="border: none;">
@@ -37,21 +52,21 @@
                                  <div class="row">
                                     <div class="col-lg-6">
                                        <strong>Nombre: </strong>{{ $usuario->name }}<br>
-                                       <input type="text" name="title" value="{{ $usuario->name }}">
+                                       <input type="text" name="name"  id="name" value="{{ $usuario->name }}">
                                     </div>
                                     <div class="col-lg-6">
                                        <strong>Apellido: </strong>{{ $usuario->lastname }}<br>
-                                       <input type="text" name="title" value="{{ $usuario->lastname }}">
+                                       <input type="text" name="lastname" id="lastname" value="{{ $usuario->lastname }}">
                                     </div>
                                  </div><br>
                                  <div class="row">
                                     <div class="col-lg-6">
                                        <strong>Email: </strong>{{ $usuario->email }}<br>
-                                       <input type="text" name="email" value="{{ $usuario->email }}">
+                                       <input type="text" name="email" is="email" value="{{ $usuario->email }}">
                                     </div>
                                     <div class="col-lg-6">
                                        <strong>Telefono: </strong>{{ $usuario->celphone }}<br>
-                                       <input type="text" name="celphone" value="{{ $usuario->celphone }}">
+                                       <input type="text" name="celphone" id="celphone" value="{{ $usuario->celphone }}">
                                     </div>
                                  </div>
                                  <hr class="my-4">
@@ -61,30 +76,30 @@
                                     <div class="col-md-6">
                                        <strong>Direccion: </strong>{{ $usuario->address }}<br>
 
-                                       <input type="text" name="address" value="{{ $usuario->address }}">
+                                       <input type="text" name="address" id="address" value="{{ $usuario->address }}">
                                     </div>
                                     <div class="col-md-6">
                                        <strong>Codigo Postal: </strong>{{ $usuario->zipcode }}<br>
 
-                                       <input type="text" name="zipcode" value="{{ $usuario->zipcode }}">
+                                       <input type="text" name="zipcode" id="zipcode" value="{{ $usuario->zipcode }}">
                                     </div>
                                  </div>
                                  <hr class="my-4">
                                  <div class="row">
                                     <div class="col-md-6">
                                        <strong>Provincia: </strong>{{ $usuario->state }}<br>
-                                       <input type="text" name="state" value="{{ $usuario->state }}">
+                                       <input type="text" name="state" id="state" value="{{ $usuario->state }}">
                                     </div>
                                     <div class="col-md-6">
                                        <strong>Ciudad: </strong>{{ $usuario->city }}<br>
 
-                                       <input type="text" name="city" value="{{ $usuario->city }}">
+                                       <input type="text" name="city" id="city" value="{{ $usuario->city }}">
                                     </div>
                                 </div><br>
                                     <div class="row">
                                       <div class="col-md-3">
                                          <strong>Pais: </strong>{{ $usuario->country }}<br>
-                                         <input type="text" name="country" value="{{ $usuario->country}}">
+                                         <input type="text" name="country" id="country" value="{{ $usuario->country}}">
                                       </div>
                                     </div>
                               </div>
@@ -99,6 +114,7 @@
                     </div>
                      <a href="/user" class="btn btn-lg btn-warning float-left">Volver</a>
                   </div>
+                </form>
                </section>
             </div>
          </div>

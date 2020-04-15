@@ -9,7 +9,8 @@ Auth::routes();
 
 Route::get('/user', 'UserController@userProfile')->name('user')->middleware('auth');
 Route::get('/editform/{id}', 'UserController@editform')->name('editform');
-Route::post('/user/{id}','HomeController@edit')->name('user');
+
+Route::get('/updateUser/{id}','UserController@updateUser')->name('updateUser');
 
 Route::get('/shoppingcart', 'CartController@shoppingcart')->name('shoppingcart')->middleware('auth');
 Route::get('/addToCart/{id}', 'CartController@add')->name('addToCart')->middleware('auth');
