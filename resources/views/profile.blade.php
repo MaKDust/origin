@@ -16,7 +16,7 @@
                         <div class="card shadow">
                            <h5 class="text-center" style=" margin-top: 5px;">Foto de Perfil</h5>
                            <div class="card shadow" >
-                              <img class="img-fluid img-thumbnail rounded mx-auto d-block" src="{{ $usuario->avatar }}" style=" height:200px ;width: 200px;">
+                              <img class="img-fluid img-thumbnail rounded mx-auto d-block" src="/img/{{ $usuario->avatar }}" style=" height:200px ;width: 200px;">
                            </div>
                         </div>
                      </div>

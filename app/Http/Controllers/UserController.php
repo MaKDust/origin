@@ -18,6 +18,7 @@ class UserController extends Controller
     return view('editform',compact("usuario"));
 
   }
+  
   public function updateUser(Request $formulario, $id)
   {
   $formulario->validate([
@@ -33,26 +34,29 @@ class UserController extends Controller
     'avatar'        =>  'image'
 ]);
 
-//$avataruploaded = $formulario->file('avatar');
-//$avatarname = time() . '.' . $avataruploaded->getClientOriginalExtension();
-//$avatarpath = public_path('/img/');
-//$avataruploaded->move($avatarpath, $avatarname);
-    $users=User::find($id);
+    $avataruploaded = $formulario->file('avatar');
+    $avatarname = time() . '.' . $avataruploaded->getClientOriginalExtension();
+    $avatarpath = public_path('/img/');
+    $avataruploaded->move($avatarpath, $avatarname);
 
-    $users->email=$formulario['email'];
-    $users->address= $formulario["address"];
-    $users->lastname=$formulario['lastname'];
-    $users->address= $formulario["address"];
-    $users->celphone=$formulario['celphone'];
-    $users->address= $formulario["address"]; //Direccion
-    $users->city= $formulario["city"];     //Ciudad
-    $users->state= $formulario["state"];  // Provincia
-    $users->zipcode= $formulario["zipcode"];  // Cod Postal
-    $users->country= $formulario["country"];
-  //  $users->avatar=$avatarname;
 
-    $users->update();
+    $users= array(
+        'name'          =>  $formulario->name,
+        'email'        =>   $formulario->email,
+        'lastname'      =>   $formulario->lastname,
+        'address'   =>   $formulario->address,
+        'celphone'         =>   $formulario->celphone,
+        'city'         =>   $formulario->city,
+        'state'        =>   $formulario->state,
+        'country'        =>  $formulario->country,
+        'zipcode'        =>   $formulario->zipcode,
+        'avatar'        =>   $avatarname
 
-    return redirect('user');
+    );
+
+    User::whereId($id)->update($users);
+            return redirect()->route('user')->with('success', 'Usuario actualizado!');
+
+   
   }
 }

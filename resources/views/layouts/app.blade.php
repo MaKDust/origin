@@ -65,7 +65,7 @@
                         <li>
                            <a href="{{url('/user')}}">
                            <img
-                              src="{{asset(Auth::user()->avatar)}}"
+                              src="/img/{{ $usuario->avatar }}"
                               alt=""
                               class="img-responsive img-fluid img-thumbnail rounded mx-auto d-block"
                               style="height:40px;width:40px;margin-left:15px;"
