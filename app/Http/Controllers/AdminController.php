@@ -48,7 +48,7 @@ class AdminController extends Controller
     {
         if (Auth::user()->role == 1) {
             $orders = Order::latest()->Paginate(6);
-            return view('metrics', compact('orders'));
+            return view('sales', compact('orders'));
         } else {
             return redirect('/');
         }

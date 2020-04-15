@@ -101,8 +101,8 @@ class ProductsController extends Controller
             'description'   =>  $request->description,
             'stock'         =>  $request->stock,
             'price'         =>  $request->price,
-            'new'           =>  $request->new,
-            'sale'          =>  $request->sale,            
+            // 'new'           =>  $request->new,
+            // 'sale'          =>  $request->sale,            
             'avatar'        =>  $avatarname
             );
 
@@ -123,8 +123,8 @@ class ProductsController extends Controller
             'description'   =>  $request->description,
             'stock'         =>  $request->stock,
             'price'         =>  $request->price,
-            'new'           =>  $request->new,
-            'sale'          =>  $request->sale
+            // 'new'           =>  $request->new,
+            // 'sale'          =>  $request->sale
         );
 
             Products::whereId($id)->update($products);
