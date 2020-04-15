@@ -32,7 +32,7 @@
                         <div class="card shadow">
                            <h4 class="text-center" style=" margin-top: 5px;">{{ $usuario->name }}</h4>
                            <div class="card shadow" >
-                              <img class="img-fluid img-thumbnail rounded mx-auto d-block" src="/img/{{($usuario->avatar)}}" style="height: 100px;width: 100px;">
+                              <img class="img-fluid img-thumbnail rounded mx-auto d-block" src="{{($usuario->avatar)}}" style="height: 100px;width: 100px;">
                               <input type="file" name="avatar" id="avatar" class="form-control" style="border: none;">
                            </div>
                         </div>
