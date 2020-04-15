@@ -7,7 +7,8 @@ Route::get('/search', 'HomeController@search')->name('search');
 Route::get('/Product/{id}', 'HomeController@Product')->name('Product');
 Auth::routes();
 
-Route::get('/user', 'HomeController@userProfile')->name('user')->middleware('auth');
+Route::get('/user', 'UserController@userProfile')->name('user')->middleware('auth');
+Route::get('/editform/{id}', 'UserController@editform')->name('editform');
 Route::post('/user/{id}','HomeController@edit')->name('user');
 
 Route::get('/shoppingcart', 'CartController@shoppingcart')->name('shoppingcart')->middleware('auth');
